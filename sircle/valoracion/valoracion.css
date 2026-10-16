@@ -1,0 +1,259 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 15px;
+    color: #333;
+}
+
+/* CONTENEDOR */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+/* TÍTULO */
+.section-title {
+    color: #5275e9;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #2c80ff;
+    padding-bottom: 10px;
+}
+
+/* GRID 2 COLUMNAS */
+.two-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* CADA BLOQUE */
+.column {
+    background: #f8fafc;
+    border-radius: 6px;
+    padding: 15px;
+    border-left: 4px solid #1e4d94;
+}
+
+/* HEADER DE BLOQUE */
+.column-header h3 {
+    font-size: 1rem;
+    color: #2c80ff;
+    margin-bottom: 12px;
+}
+
+/* TABLAS */
+.valoracion-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: white;
+}
+
+.valoracion-table td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+
+/* RADIO SI / NO */
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* CHECKBOX */
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+}
+
+/* DOWNTON */
+.downton-box {
+    margin-top: 15px;
+}
+
+.downton-box label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.downton-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+#downtonResultado {
+    width: 100px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #edf2f7;
+    font-weight: 600;
+    text-align: center;
+}
+
+.downton-riesgo {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* BOTONES */
+.btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-primary {
+    background: #2c80ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1a6fe6;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background: #cbd5e1;
+}
+
+/* ======================
+   MODAL DOWNTON
+====================== */
+
+/* MODAL BASE */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+
+.modal-content {
+    background: white;
+    width: 500px;
+    max-width: 95%;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 2px solid #2c80ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 1.1rem;
+    color: #5275e9;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 15px;
+}
+
+.modal-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+/* TABLA DOWNTON */
+.downton-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.downton-table th,
+.downton-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.downton-table th {
+    background: #f1f5f9;
+    text-align: left;
+}
+
+/* SCROLL PARA MODAL DOWNTON */
+.modal-content.modal-large {
+    max-height: 85vh;
+}
+
+.modal-content.modal-large .modal-body,
+.modal-content.modal-large table {
+    overflow-y: auto;
+}
+
+.downton-table {
+    display: block;
+    max-height: 55vh;
+    overflow-y: auto;
+}
+
+.oculto {
+    display: none;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .two-columns-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+

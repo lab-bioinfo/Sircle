@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Valoración Riesgo de Caídas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="valoracion.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+
+        <h2 class="section-title">
+            <i class="fas fa-person-falling"></i> Valoración Riesgo de Caída
+        </h2>
+
+        <div class="two-columns-grid">
+
+            <!-- ================= CONDUCTA INSEGURA ================= -->
+            <div class="column">
+                <div class="column-header">
+                    <h3>Valorar conducta insegura</h3>
+                </div>
+
+                <table class="valoracion-table">
+                    <tr>
+                        <td>Agitación o desorientación</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="agitacion" value="si"> Sí</label>
+                            <label><input type="radio" name="agitacion" value="no"> No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Edad avanzada</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="edad" value="si"> Sí</label>
+                            <label><input type="radio" name="edad" value="no"> No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Incomprensión de educación</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="educacion" value="si"> Sí</label>
+                            <label><input type="radio" name="educacion" value="no"> No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Problemas de movilidad</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="movilidad" value="si"> Sí</label>
+                            <label><input type="radio" name="movilidad" value="no"> No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Uso de medicamentos</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="medicamentos" value="si"> Sí</label>
+                            <label><input type="radio" name="medicamentos" value="no"> No</label>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- DOWNTON -->
+                <div class="downton-box">
+                    <label>Puntaje Escala Downton</label>
+
+                    <div class="downton-row">
+                        <input type="text" id="downtonResultado" readonly placeholder="Sin evaluar">
+                        <button class="btn btn-secondary btn-small" onclick="abrirModalDownton()">
+                            Evaluar
+                        </button>
+                    </div>
+
+                    <div id="downtonRiesgo" class="downton-riesgo"></div>
+                </div>
+            </div>
+
+            <!-- ================= PREVENCIÓN ================= -->
+            <div class="column">
+                <div class="column-header">
+                    <h3>Prevención de caídas</h3>
+                </div>
+
+                <table class="valoracion-table">
+                    <tr>
+                        <td>Barandas en alto</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Cama frenada</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Levantar asistido</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Deambular asistido</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Cama nivel más bajo</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Vigilancia estricta</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </table>
+
+                <div class="column-header" style="margin-top:1rem;">
+                    <h3>Contención física</h3>
+                </div>
+
+                <table class="valoracion-table">
+                    <tr>
+                        <td>Apertura hoja control enfermería</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="control" value="si"> Sí</label>
+                            <label><input type="radio" name="control" value="no"> No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sujeción de muñecas</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="munecas" value="si"> Sí</label>
+                            <label><input type="radio" name="munecas" value="no"> No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sujeción de tobillos</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="tobillos" value="si"> Sí</label>
+                            <label><input type="radio" name="tobillos" value="no"> No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sujeción torácica</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="torax" value="si"> Sí</label>
+                            <label><input type="radio" name="torax" value="no"> No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sujeción total</td>
+                        <td class="radio-group">
+                            <label><input type="radio" name="total" value="si"> Sí</label>
+                            <label><input type="radio" name="total" value="no"> No</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ================= MODAL DOWNTON ================= -->
+<div id="modal-downton" class="modal">
+  <div class="modal-content modal-large">
+    <div class="modal-header">
+      <h3>Escala de Riesgo de Caídas de Downton</h3>
+      <button class="btn btn-primary" onclick="cerrarModalDownton()">Listo</button>
+    </div>
+
+    <table class="downton-table">
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Variable</th>
+          <th>Selección</th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Caídas previas -->
+        <tr class="category-row">
+          <td rowspan="2">Caídas previas</td>
+          <td>Sí</td>
+          <td>
+            <input type="checkbox" class="downton" data-value="1">
+            </td>
+        </tr>
+        <tr>
+          <td>No</td>
+          <td><input type="checkbox" class="downton" data-value="0"></td>
+        </tr>
+
+        <!-- Uso de medicamentos -->
+        <tr class="category-row">
+          <td rowspan="7">Uso de medicamentos</td>
+          <td>Ninguno</td>
+          <td><input type="checkbox" data-value="0"></td>
+          
+        </tr>
+        <tr>
+          <td>Tranquilizantes / Sedantes</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+        <tr>
+          <td>Diuréticos</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+        <tr>
+          <td>Hipotensores (no diuréticos)</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+        <tr>
+          <td>Antiparkinsonianos</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+        <tr>
+          <td>Antidepresivos</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+        <tr>
+          <td>Otros medicamentos</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+
+        <!-- Déficit sensorial -->
+        <tr class="category-row">
+          <td rowspan="3">Déficit sensorial</td>
+          <td>Ninguno</td>
+          <td><input type="checkbox" data-value="0"></td>
+          
+        </tr>
+        <tr>
+          <td>Alteraciones visuales</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+        <tr>
+          <td>Alteraciones auditivas</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+
+        <!-- Estado mental -->
+        <tr class="category-row">
+          <td rowspan="2">Estado mental</td>
+          <td>Orientado</td>
+          <td><input type="checkbox" data-value="0"></td>
+          
+        </tr>
+        <tr>
+          <td>Confuso</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+
+        <!-- Deambulación -->
+        <tr class="category-row">
+          <td rowspan="4">Deambulación</td>
+          <td>Normal</td>
+          <td><input type="checkbox" data-value="0"></td>
+          
+        </tr>
+        <tr>
+          <td>Segura con ayuda</td>
+         
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+        <tr>
+          <td>Insegura con ayuda</td>
+         
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+        <tr>
+          <td>No deambula</td>
+          
+          <td><input type="checkbox" class="downton" data-value="1"></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="downton-result oculto">
+      <p><strong>Puntaje total:</strong> <span id="puntaje-downton">0</span></p>
+      <p><strong>Clasificación:</strong> <span id="clasificacion-downton">Riesgo bajo</span></p>
+    </div>
+
+   
+  </div>
+</div>
+
+
+<script src="valoracion.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Indicadores HHHA</title>
+  <link rel="stylesheet" href="hhha.css">
+</head>
+<body>
+
+<section class="hhha-section">
+  <h2>INDICADORES HHHA</h2>
+
+  <!-- FILA 1 -->
+  <div class="hhha-grid">
+
+    <!-- ORDEN FICHA CLÍNICA -->
+    <div class="hhha-box">
+      <h3>Orden ficha clínica</h3>
+      <table>
+        <tbody>
+          <tr><td>1. Hoja ingreso médico</td><td><input type="checkbox" name="hoja_ingreso_medico"></td></tr>
+          <tr><td>2. Ingreso estadístico / GES</td><td><input type="checkbox" name="ingreso_estadistico"></td></tr>
+          <tr><td>3. Hoja DAU</td><td><input type="checkbox" name="hoja_dau"></td></tr>
+          <tr><td>4. Docs. otros establecimientos</td><td><input type="checkbox" name="docs_externos"></td></tr>
+          <tr><td>5. Hoja evolución</td><td><input type="checkbox" name="hoja_evolucion"></td></tr>
+          <tr><td>6. Exámenes</td><td><input type="checkbox" name="examenes_ficha"></td></tr>
+          <tr><td>7. Protocolo pertenencias</td><td><input type="checkbox" name="protocolo_pertenencias"></td></tr>
+          <tr><td>8. Hoja enfermería</td><td><input type="checkbox" name="hoja_enfermeria"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- IDENTIFICACIÓN PACIENTE -->
+    <div class="hhha-box">
+      <h3>Identificación del paciente</h3>
+
+      <div class="radio-row">
+        <span>Brazalete correcto</span>
+        <label><input type="radio" name="brazalete" value="si"> SI</label>
+        <label><input type="radio" name="brazalete" value="no"> NO</label>
+      </div>
+
+      <label>
+        Ubicación brazalete
+        <input type="text" name="ubicacion_brazalete">
+      </label>
+
+      <div class="radio-row">
+        <span>Pizarra correcta</span>
+        <label><input type="radio" name="pizarra" value="si"> SI</label>
+        <label><input type="radio" name="pizarra" value="no"> NO</label>
+      </div>
+
+      <label>
+        Observaciones
+        <textarea name="obs_identificacion" rows="3"></textarea>
+      </label>
+    </div>
+
+  </div>
+
+  <!-- FILA 2 -->
+  <div class="hhha-grid">
+
+    <!-- PERTENENCIAS -->
+    <div class="hhha-box">
+      <h3>Pertenencias del paciente</h3>
+
+      <div class="radio-row">
+        <span>Protocolo realizado</span>
+        <label><input type="radio" name="pertenencias" value="si"> SI</label>
+        <label><input type="radio" name="pertenencias" value="no"> NO</label>
+      </div>
+
+      <label>
+        Observaciones
+        <textarea name="obs_pertenencias" rows="4"></textarea>
+      </label>
+    </div>
+
+    <!-- RESPONSABLE -->
+    <div class="hhha-box">
+      <h3>Responsable</h3>
+      <label>
+        Nombre del responsable
+        <input type="text" name="responsable_nombre" class="responsable-input">
+      </label>
+      <div class="credenciales-grid">
+        <div class="credencial-item">
+          <label>
+            Usuario
+            <input type="text" name="responsable_usuario" class="usuario-input">
+          </label>
+        </div>
+        <div class="credencial-item">
+          <label>
+            Contraseña
+            <input type="password" name="responsable_password" class="password-input">
+          </label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="hhha.js"></script>
+</body>
+</html>

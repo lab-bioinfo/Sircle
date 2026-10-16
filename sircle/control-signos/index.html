@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Signos Vitales</title>
+    <link rel="stylesheet" href="control-signos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<section class="module-container">
+    <div class="module-header">
+        <h2>Control de Signos Vitales y Mediciones</h2>
+        <button class="btn-primary" id="btn-add-col">
+            <i class="fas fa-plus"></i> Agregar medición
+        </button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="vital-table" id="vital-table">
+            <thead>
+                <tr id="header-row">
+                    <th>Variable</th>
+                    <th>Medición 1</th>
+                </tr>
+            </thead>
+            <tbody id="vital-body">
+                </tbody>
+        </table>
+    </div>
+</section>
+
+<div id="glasgow-modal" class="modal hidden">
+    <div class="modal-content">
+         <span class="close-modal" onclick="toggleModal('glasgow-modal', false)">&times;</span>
+        <h3>Escala de Glasgow</h3>
+        <div class="glasgow-group">
+            <label>Apertura Ocular</label>
+            <select id="ocular">
+                <option value="4">Espontánea (4)</option>
+                <option value="3">A órdenes (3)</option>
+                <option value="2">Al dolor (2)</option>
+                <option value="1">No responde (1)</option>
+            </select>
+            <label>Respuesta Verbal</label>
+            <select id="verbal">
+                <option value="5">Orientada (5)</option>
+                <option value="4">Confusa (4)</option>
+                <option value="3">Palabras inapropiadas (3)</option>
+                <option value="2">Sonidos incomprensibles (2)</option>
+                <option value="1">No responde (1)</option>
+            </select>
+            <label>Respuesta Motora</label>
+            <select id="motora">
+                <option value="6">Obedece órdenes (6)</option>
+                <option value="5">Localiza dolor (5)</option>
+                <option value="4">Retira al dolor (4)</option>
+                <option value="3">Flexión anormal (3)</option>
+                <option value="2">Extensión (2)</option>
+                <option value="1">No movimientos (1)</option>
+            </select>
+        </div>
+        <button class="btn-primary" onclick="calcularGlasgow()">Listo</button>
+    </div>
+</div>
+
+<div id="dolor-modal" class="modal hidden">
+    <div class="modal-content modal-large">
+        <span class="close-modal" onclick="toggleModal('dolor-modal', false)">&times;</span>
+        <h3>Valoración del Dolor</h3>
+        <div class="dolor-grid" id="dolor-inputs-container">
+            </div>
+        <button class="btn-primary" onclick="guardarDolor()">Listo</button>
+    </div>
+</div>
+
+<script src="control-signos.js"></script>
+</body>
+</html>

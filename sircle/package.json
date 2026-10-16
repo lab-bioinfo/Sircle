@@ -1,0 +1,14 @@
+{
+  "name": "cib-backend", 
+  "version": "1.0.0",
+  "description": "Backend Python para sistema CIB",
+  "main": "backend.py",
+  "scripts": {
+    "start": "python backend.py",
+    "install-deps": "pip install flask flask-cors"
+  },
+  "dependencies": {
+    "flask": "^2.3.2",
+    "flask-cors": "^4.0.0"
+  }
+}

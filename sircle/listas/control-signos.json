@@ -1,0 +1,90 @@
+{
+  "llene_capilar": [
+    { "value": "", "display": "" },
+    { "value": "<2s", "display": "<2s" },
+    { "value": ">2s", "display": ">2s" }
+  ],
+  "bic_farmaco": [
+    { "value": "", "display": "" },
+    { "value": "AMIKACINA", "display": "AMIKACINA" },
+    { "value": "SULBACTAN-AMPICILINA", "display": "SULBACTAN-AMPICILINA" },
+    { "value": "AMOXICILINA", "display": "AMOXICILINA" }
+  ],
+  "bic_flujo": [
+    { "value": "", "display": "" },
+    { "value": "ml_h", "display": "ml/h" },
+    { "value": "gamas_kg_min", "display": "Gamas/kg/min" }
+  ],
+  "bic_resuspendido": [
+    { "value": "", "display": "" },
+    { "value": "sf_09", "display": "SF 0,9% (Suero Fisiológico)" },
+    { "value": "sg_5", "display": "SG 5% (Suero Glucosado)" },
+    { "value": "sg_20", "display": "SG 20%" },
+    { "value": "sg_30", "display": "SG 30%" },
+    { "value": "ringer_lactato", "display": "Ringer Lactato" }
+  ],
+  "glasgow_apertura_ocular": [
+    { "value": "4", "display": "Espontánea (4)" },
+    { "value": "3", "display": "A órdenes (3)" },
+    { "value": "2", "display": "Al dolor (2)" },
+    { "value": "1", "display": "No responde (1)" }
+  ],
+  "glasgow_respuesta_verbal": [
+    { "value": "5", "display": "Orientada (5)" },
+    { "value": "4", "display": "Confusa (4)" },
+    { "value": "3", "display": "Palabras inapropiadas (3)" },
+    { "value": "2", "display": "Sonidos incomprensibles (2)" },
+    { "value": "1", "display": "No responde (1)" }
+  ],
+  "glasgow_respuesta_motora": [
+    { "value": "6", "display": "Obedece órdenes (6)" },
+    { "value": "5", "display": "Localiza dolor (5)" },
+    { "value": "4", "display": "Retira al dolor (4)" },
+    { "value": "3", "display": "Flexión anormal (3)" },
+    { "value": "2", "display": "Extensión (2)" },
+    { "value": "1", "display": "No movimientos (1)" }
+  ],
+  "variables_vitales": [
+    { "id": "fecha", "nombre": "Fecha", "tipo": "date" },
+    { "id": "hora", "nombre": "Hora", "tipo": "time" },
+    { "id": "fc", "nombre": "FC", "tipo": "number", "step": 0.01 },
+    { "id": "fr", "nombre": "FR", "tipo": "number", "step": 0.01 },
+    { "id": "t_axilar", "nombre": "T° Axilar", "tipo": "number", "step": 0.01 },
+    { "id": "sato2", "nombre": "SatO₂", "tipo": "number", "step": 0.01 },
+    { "id": "fio2", "nombre": "FiO₂", "tipo": "number", "step": 0.01 },
+    { "id": "pas", "nombre": "PAS", "tipo": "number" },
+    { "id": "pad", "nombre": "PAD", "tipo": "number" },
+    { "id": "pam", "nombre": "PAM", "tipo": "number", "readonly": true },
+    { "id": "llene_capilar", "nombre": "Llene capilar", "tipo": "select" },
+    { "id": "glasgow", "nombre": "Glasgow", "tipo": "button" },
+    { "id": "dolor", "nombre": "Dolor (ENA)", "tipo": "button" },
+    { "id": "diuresis", "nombre": "Diuresis hria", "tipo": "number" },
+    { "id": "bic_farmaco", "nombre": "BIC Fármaco", "tipo": "select" },
+    { "id": "bic_flujo", "nombre": "BIC Flujo", "tipo": "select" },
+    { "id": "bic_resuspendido", "nombre": "Dilución", "tipo": "select" },
+    { "id": "presentacion_solucion", "nombre": "Presentación", "tipo": "select" }
+  ],
+  "dolor_campos": [
+    { "id": "ubicacion", "nombre": "Ubicación", "tipo": "textarea", "placeholder": "Ubicación" },
+    { "id": "irradiacion", "nombre": "Irradiación", "tipo": "textarea", "placeholder": "Irradiación" },
+    { "id": "intensidad", "nombre": "Intensidad", "tipo": "number", "placeholder": "Intensidad (0–10)", "min": 0, "max": 10 },
+    { "id": "variacion", "nombre": "Variación", "tipo": "textarea", "placeholder": "Variación diurna/nocturna" },
+    { "id": "actitud", "nombre": "Actitud", "tipo": "textarea", "placeholder": "Actitud del enfermo" },
+    { "id": "sintomas", "nombre": "Síntomas", "tipo": "textarea", "placeholder": "Síntomas acompañantes" },
+    { "id": "tipo", "nombre": "Tipo", "tipo": "textarea", "placeholder": "Tipo o carácter" },
+    { "id": "evolucion", "nombre": "Evolución", "tipo": "textarea", "placeholder": "Comienzo y evolución" },
+    { "id": "desencadenantes", "nombre": "Desencadenantes", "tipo": "textarea", "placeholder": "Factores desencadenantes" },
+    { "id": "modificadores", "nombre": "Modificadores", "tipo": "textarea", "placeholder": "Factores que lo modifican" },
+    { "id": "repercusion", "nombre": "Repercusión", "tipo": "textarea", "placeholder": "Repercusión en la vida diaria" }
+  ],
+  "presentacion_solucion": [
+    { "value": "", "display": "" },
+    { "value": "10", "display": "10 cc" },
+    { "value": "20", "display": "20 cc" },
+    { "value": "100", "display": "100 cc" },
+    { "value": "250", "display": "250 cc" },
+    { "value": "500", "display": "500 cc" },
+    { "value": "1000", "display": "1000 cc" },
+    { "value": "3000", "display": "3000 cc" }
+  ]
+}

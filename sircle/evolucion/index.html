@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evolución paciente</title>
+  <link rel="stylesheet" href="evolucion.css">
+
+</head>
+<body>
+
+<section class="evolucion-module">
+
+  <!-- ================================================= -->
+  <!-- EVOLUCIÓN TÉCNICO EN ENFERMERÍA -->
+  <!-- ================================================= -->
+  <article class="evolucion-bloque" data-tipo="tecnico">
+
+    <h3 class="evolucion-titulo">EVOLUCIÓN TÉCNICO EN ENFERMERÍA</h3>
+
+    <div class="turnos-contenedor">
+
+      <!-- TURNO LARGO -->
+      <div class="turno" data-turno="largo">
+        <h4 class="turno-titulo">Turno Largo (08:00 – 20:00)</h4>
+
+        <table class="tabla-evolucion">
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Observación</th>
+              <th>Responsable</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody class="registros">
+            <tr class="registro">
+              <td>
+                <input type="time" name="hora_largo_tecnico[]">
+              </td>
+              <td>
+                <textarea name="observacion_largo_tecnico[]" rows="2"></textarea>
+              </td>
+              <td>
+                <input type="text" name="responsable_largo_tecnico[]">
+              </td>
+              <td class="col-accion">
+  <button type="button" class="btn-eliminar-registro">✕</button>
+</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="button" class="btn-agregar-registro">
+          + Agregar registro
+        </button>
+      </div>
+
+      <!-- TURNO NOCHE -->
+      <div class="turno" data-turno="noche">
+        <h4 class="turno-titulo">Turno Noche (20:00 – 08:00)</h4>
+
+        <table class="tabla-evolucion">
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Observación</th>
+              <th>Responsable</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody class="registros">
+            <tr class="registro">
+              <td>
+                <input type="time" name="hora_noche_tecnico[]">
+              </td>
+              <td>
+                <textarea name="observacion_noche_tecnico[]" rows="2"></textarea>
+              </td>
+              <td>
+                <input type="text" name="responsable_noche_tecnico[]">
+              </td>
+              <td class="col-accion">
+  <button type="button" class="btn-eliminar-registro">✕</button>
+</td>
+              
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="button" class="btn-agregar-registro">
+          + Agregar registro
+        </button>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ================================================= -->
+  <!-- EVOLUCIÓN ENFERMERA / O -->
+  <!-- ================================================= -->
+  <article class="evolucion-bloque" data-tipo="enfermera">
+
+    <h3 class="evolucion-titulo">EVOLUCIÓN ENFERMERA / O</h3>
+
+    <div class="turnos-contenedor">
+
+      <!-- TURNO LARGO -->
+      <div class="turno" data-turno="largo">
+        <h4 class="turno-titulo">Turno Largo (08:00 – 20:00)</h4>
+
+        <table class="tabla-evolucion">
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Observación</th>
+              <th>Responsable</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody class="registros">
+            <tr class="registro">
+              <td>
+                <input type="time" name="hora_largo_enfermera[]">
+              </td>
+              <td>
+                <textarea name="observacion_largo_enfermera[]" rows="2"></textarea>
+              </td>
+              <td>
+                <input type="text" name="responsable_largo_enfermera[]">
+              </td>
+              <td class="col-accion">
+  <button type="button" class="btn-eliminar-registro">✕</button>
+</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="button" class="btn-agregar-registro">
+          + Agregar registro
+        </button>
+      </div>
+
+      <!-- TURNO NOCHE -->
+      <div class="turno" data-turno="noche">
+        <h4 class="turno-titulo">Turno Noche (20:00 – 08:00)</h4>
+
+        <table class="tabla-evolucion">
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Observación</th>
+              <th>Responsable</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody class="registros">
+            <tr class="registro">
+              <td>
+                <input type="time" name="hora_noche_enfermera[]">
+              </td>
+              <td>
+                <textarea name="observacion_noche_enfermera[]" rows="2"></textarea>
+              </td>
+              <td>
+                <input type="text" name="responsable_noche_enfermera[]">
+              </td>
+              <td class="col-accion">
+  <button type="button" class="btn-eliminar-registro">✕</button>
+</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="button" class="btn-agregar-registro">
+          + Agregar registro
+        </button>
+      </div>
+
+    </div>
+  </article>
+
+</section>
+<script src="evolucion.js"></script>
+</body>
+</html>

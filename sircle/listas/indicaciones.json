@@ -1,0 +1,60 @@
+{
+  "regimen_tipo": [
+    { "value": "", "display": "Seleccione tipo..." },
+    { "value": "dieta_basal", "display": "Dieta basal", "group": "Dietas Especiales" },
+    { "value": "dieta_absoluta", "display": "Dieta absoluta", "group": "Dietas Especiales" },
+    { "value": "dieta_hiposodica", "display": "Dieta hiposódica", "group": "Dietas Especiales" },
+    { "value": "dieta_normoproteica", "display": "Dieta normoproteica", "group": "Dietas Especiales" },
+    { "value": "dieta_hiperproteica", "display": "Dieta hiperproteica", "group": "Dietas Especiales" },
+    { "value": "dieta_diabetes", "display": "Dieta para diabetes", "group": "Dietas Especiales" },
+    { "value": "dieta_sin_gluten", "display": "Exento de gluten", "group": "Dietas Especiales" },
+    { "value": "dieta_sin_lactosa", "display": "Sin lactosa", "group": "Dietas Especiales" },
+    { "value": "tolerancia_liquidos", "display": "Tolerancia a líquidos", "group": "Líquidos" },
+    { "value": "liquido_normal", "display": "Líquido normal", "group": "Líquidos" },
+    { "value": "dieta_semiliquida", "display": "Semilíquida", "group": "Semilíquidos" },
+    { "value": "dieta_semiblanda", "display": "Semiblanda", "group": "Blandos" },
+    { "value": "otro", "display": "Otro (especificar)" }
+  ],
+  "reposo_tipo": [
+    { "value": "", "display": "Seleccione tipo..." },
+    { "value": "absoluto", "display": "Absoluto" },
+    { "value": "relativo", "display": "Relativo" },
+    { "value": "relativo_asistido", "display": "Relativo asistido" },
+    { "value": "otro", "display": "Otro (especificar)" }
+  ],
+  "medicamento_via": [
+    { "value": "", "display": "Seleccione..." },
+    { "value": "oral", "display": "Oral" },
+    { "value": "ev", "display": "Endovenosa" },
+    { "value": "im", "display": "Intramuscular" },
+    { "value": "sc", "display": "Subcutánea" },
+    { "value": "topica", "display": "Tópica" },
+    { "value": "inhalatoria", "display": "Inhalatoria" },
+    { "value": "rectal", "display": "Rectal" },
+    { "value": "otra", "display": "Otra" }
+  ],
+  "medicamento_frecuencia": [
+    { "value": "", "display": "Seleccione..." },
+    { "value": "cada_6h", "display": "Cada 6 horas" },
+    { "value": "cada_8h", "display": "Cada 8 horas" },
+    { "value": "cada_12h", "display": "Cada 12 horas" },
+    { "value": "cada_24h", "display": "Cada 24 horas" },
+    { "value": "cada_48h", "display": "Cada 48 horas" },
+    { "value": "unica_dosis", "display": "Dosis única" },
+    { "value": "segun_necesidad", "display": "Según necesidad" },
+    { "value": "continuo", "display": "Infusión continua" }
+  ],
+  "medicamento_unidad": [
+    { "value": "mg", "display": "mg" },
+    { "value": "g", "display": "g" },
+    { "value": "mcg", "display": "mcg" },
+    { "value": "UI", "display": "UI" },
+    { "value": "ml", "display": "ml" },
+    { "value": "ampolla", "display": "ampolla" }
+  ],
+  "kinesioterapia_tipo": [
+    { "value": "motora", "display": "Motora" },
+    { "value": "respiratoria", "display": "Respiratoria" },
+    { "value": "ambas", "display": "Ambas" }
+  ]
+}

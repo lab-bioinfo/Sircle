@@ -1,0 +1,312 @@
+/* hhha.css - Estilo consistente con módulos anteriores */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 15px;
+    color: #333;
+}
+
+.hhha-section {
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.hhha-section h2 {
+    color: #2c80ff;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #2c80ff;
+}
+
+.hhha-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.hhha-box {
+    border: 1px solid #e8eaed;
+    padding: 15px;
+    border-radius: 6px;
+    background: #f8fafc;
+    border-left: 4px solid #2c80ff;
+    font-size: 0.85rem;
+}
+
+.hhha-box h3 {
+    color: #2c80ff;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e8eaed;
+}
+
+/* Tabla Orden Ficha Clínica */
+.hhha-box table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+.hhha-box table tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.hhha-box table tr:hover {
+    background: #edf2ff;
+}
+
+.hhha-box table td {
+    padding: 4px 2px;
+    vertical-align: middle;
+}
+
+.hhha-box table td:first-child {
+    color: #555;
+    font-weight: 500;
+}
+
+.hhha-box table td:last-child {
+    width: 40px;
+    text-align: center;
+}
+
+/* Checkboxes personalizados */
+.hhha-box input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #2c80ff;
+}
+
+/* Radio buttons y labels */
+.radio-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+.radio-row span:first-child {
+    flex: 1;
+    color: #555;
+    font-weight: 500;
+    min-width: 120px;
+}
+
+.radio-row label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-row input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    accent-color: #2c80ff;
+}
+
+/* Campos de texto y textarea */
+.hhha-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.hhha-box input[type="text"],
+.hhha-box input[type="password"] {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.hhha-box input[type="text"]:focus,
+.hhha-box input[type="password"]:focus {
+    outline: none;
+    border-color: #2c80ff;
+    box-shadow: 0 0 0 2px rgba(44, 128, 255, 0.1);
+}
+
+.hhha-box textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    resize: vertical;
+    min-height: 60px;
+    max-height: 120px;
+}
+
+.hhha-box textarea:focus {
+    outline: none;
+    border-color: #2c80ff;
+    box-shadow: 0 0 0 2px rgba(44, 128, 255, 0.1);
+}
+
+/* Estilos para la nueva sección de Responsable */
+.credenciales-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.credencial-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.credencial-item label {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.credencial-item input {
+    flex: 1;
+    margin-top: 5px;
+}
+
+.responsable-input {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+}
+
+.usuario-input,
+.password-input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+}
+
+.firma-box {
+    margin-top: 15px;
+}
+
+.firma-area {
+    width: 100%;
+    height: 60px;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    background: #f8f9fa;
+    margin-top: 5px;
+    transition: all 0.2s;
+}
+
+.firma-area:hover {
+    border-color: #2c80ff;
+    background: #edf2ff;
+    cursor: pointer;
+}
+
+/* Para responsive */
+@media (max-width: 768px) {
+    .credenciales-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .hhha-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Efectos de hover y focus */
+.hhha-box:hover {
+    border-color: #2c80ff;
+    box-shadow: 0 2px 8px rgba(44, 128, 255, 0.1);
+}
+
+/* Transiciones suaves */
+.hhha-box,
+.hhha-box input,
+.hhha-box textarea,
+.hhha-box table tr {
+    transition: all 0.2s ease;
+}
+
+/* Ajustes de altura máxima para mantener tamaño compacto */
+.hhha-box table tbody {
+    max-height: 200px;
+    overflow-y: auto;
+    display: block;
+}
+
+.hhha-box table {
+    max-height: 220px;
+    overflow: hidden;
+}
+
+/* Scrollbar personalizado */
+.hhha-box table tbody::-webkit-scrollbar {
+    width: 4px;
+}
+
+.hhha-box table tbody::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.hhha-box table tbody::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2px;
+}
+
+.hhha-box table tbody::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hhha-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hhha-box {
+        padding: 12px;
+    }
+    
+    .radio-row {
+        flex-wrap: wrap;
+        gap: 5px 15px;
+    }
+    
+    .radio-row span:first-child {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/* Ajustes específicos para los inputs de usuario/contraseña */
+.usuario-input:focus,
+.password-input:focus {
+    border-color: #2c80ff;
+    box-shadow: 0 0 0 3px rgba(44, 128, 255, 0.2);
+}

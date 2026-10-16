@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo Examen Físico - Múltiples Días</title>
+    <link rel="stylesheet" href="examen_fisico.css">
+</head>
+<body>
+
+<!-- BOTON DE DUPLICAR (se ha comentado para evitar duplicación automática) 
+<div class="encabezado-modulo">
+    <h2>Examen Físico</h2>
+    <button type="button" class="btn-duplicar" id="duplicar-examen">
+        <i class="fas fa-copy"></i> Duplicar todo (nuevo día)
+    </button>
+</div>-->
+
+<!-- Datalist global (se creará dinámicamente) -->
+<datalist id="opciones-global"></datalist>
+
+<div class="tabla-container">
+    <table class="examen-fisico">
+        <!-- Aquí se insertarán los bloques (cada bloque es un tbody.bloque-dia) -->
+        <tbody class="bloque-dia" data-bloque="1">
+            <!-- Fila de fecha/hora -->
+            <tr class="fecha-bloque">
+                <td colspan="3">
+                    <div class="fecha-contenedor">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="fecha-texto"></span>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila de títulos (por bloque) -->
+            <tr class="titulos-bloque">
+                <th>Sección</th>
+                <th>Largo</th>
+                <th>Noche</th>
+            </tr>
+            <!-- HORA -->
+            <tr>
+                <td>Hora</td>
+                <td><input type="time" name="hora_largo"></td>
+                <td><input type="time" name="hora_noche"></td>
+            </tr>
+            <!-- RESPONSABLE -->
+            <tr>
+                <td>Responsable</td>
+                <td><input type="text" name="responsable_largo" placeholder="Nombre"></td>
+                <td><input type="text" name="responsable_noche" placeholder="Nombre"></td>
+            </tr>
+            <!-- TEXTO LIBRE: Cabeza y cuello -->
+            <tr>
+                <td>Cabeza y cuello</td>
+                <td><textarea name="cabeza_cuello_largo"></textarea></td>
+                <td><textarea name="cabeza_cuello_noche"></textarea></td>
+            </tr>
+            <!-- Tórax y abdomen -->
+            <tr>
+                <td>Tórax y abdomen</td>
+                <td><textarea name="torax_abdomen_largo"></textarea></td>
+                <td><textarea name="torax_abdomen_noche"></textarea></td>
+            </tr>
+            <!-- Espalda -->
+            <tr>
+                <td>Espalda</td>
+                <td><textarea name="espalda_largo"></textarea></td>
+                <td><textarea name="espalda_noche"></textarea></td>
+            </tr>
+            <!-- Extremidades superiores -->
+            <tr>
+                <td>Extremidades superiores</td>
+                <td><textarea name="ext_sup_largo"></textarea></td>
+                <td><textarea name="ext_sup_noche"></textarea></td>
+            </tr>
+            <!-- Extremidades inferiores -->
+            <tr>
+                <td>Extremidades inferiores</td>
+                <td><textarea name="ext_inf_largo"></textarea></td>
+                <td><textarea name="ext_inf_noche"></textarea></td>
+            </tr>
+            <!-- Genitales -->
+            <tr>
+                <td>Genitales</td>
+                <td><textarea name="genitales_largo"></textarea></td>
+                <td><textarea name="genitales_noche"></textarea></td>
+            </tr>
+            <!-- Sistema linfático -->
+            <tr>
+                <td>Sistema linfático</td>
+                <td><textarea name="sistema_linfatico_largo"></textarea></td>
+                <td><textarea name="sistema_linfatico_noche"></textarea></td>
+            </tr>
+            <!-- COLORACIÓN -->
+            <tr>
+                <td>Coloración</td>
+                <td>
+                    <input type="text" name="coloracion_largo_input" class="input-autocomplete toggle" placeholder="Escribe para buscar..." list="coloracion_opciones" data-target="coloracion_largo" data-target-toggle=".otros" data-show-value="otros">
+                    <input type="hidden" name="coloracion_largo" id="coloracion_largo">
+                    <input type="text" name="coloracion_otros_largo" class="otros oculto" placeholder="Especifique">
+                </td>
+                <td>
+                    <input type="text" name="coloracion_noche_input" class="input-autocomplete toggle" placeholder="Escribe para buscar..." list="coloracion_opciones" data-target="coloracion_noche" data-target-toggle=".otros" data-show-value="otros">
+                    <input type="hidden" name="coloracion_noche" id="coloracion_noche">
+                    <input type="text" name="coloracion_otros_noche" class="otros oculto" placeholder="Especifique">
+                </td>
+            </tr>
+            <!-- TEMPERATURA -->
+            <tr>
+                <td>Temperatura</td>
+                <td>
+                    <input type="text" name="temperatura_largo_input" class="input-autocomplete toggle" placeholder="Escribe para buscar..." list="temperatura_opciones" data-target="temperatura_largo" data-target-toggle=".otros" data-show-value="otros">
+                    <input type="hidden" name="temperatura_largo" id="temperatura_largo">
+                    <input type="text" name="temperatura_otros_largo" class="otros oculto" placeholder="Especifique">
+                </td>
+                <td>
+                    <input type="text" name="temperatura_noche_input" class="input-autocomplete toggle" placeholder="Escribe para buscar..." list="temperatura_opciones" data-target="temperatura_noche" data-target-toggle=".otros" data-show-value="otros">
+                    <input type="hidden" name="temperatura_noche" id="temperatura_noche">
+                    <input type="text" name="temperatura_otros_noche" class="otros oculto" placeholder="Especifique">
+                </td>
+            </tr>
+            <!-- PULSOS -->
+            <tr>
+                <td>Pulsos periféricos</td>
+                <td>
+                    <input type="text" name="pulsos_largo_input" class="input-autocomplete toggle" placeholder="Escribe para buscar..." list="pulsos_opciones" data-target="pulsos_largo" data-target-toggle=".ubicacion" data-show-value="presentes">
+                    <input type="hidden" name="pulsos_largo" id="pulsos_largo">
+                    <input type="text" name="pulsos_ubicacion_largo" class="ubicacion oculto" placeholder="Ubicación">
+                </td>
+                <td>
+                    <input type="text" name="pulsos_noche_input" class="input-autocomplete toggle" placeholder="Escribe para buscar..." list="pulsos_opciones" data-target="pulsos_noche" data-target-toggle=".ubicacion" data-show-value="presentes">
+                    <input type="hidden" name="pulsos_noche" id="pulsos_noche">
+                    <input type="text" name="pulsos_ubicacion_noche" class="ubicacion oculto" placeholder="Ubicación">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Datalists para cada tipo -->
+<datalist id="coloracion_opciones"></datalist>
+<datalist id="temperatura_opciones"></datalist>
+<datalist id="pulsos_opciones"></datalist>
+
+<script src="examen_fisico.js"></script>
+</body>
+</html>

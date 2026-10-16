@@ -1,0 +1,50 @@
+
+    <div class="container">
+        
+
+        <!-- Contenedor principal de valoraciones -->
+        <div id="valoraciones-container">
+            <!-- La primera valoración se añade automáticamente -->
+        </div>
+
+        <button id="btn-agregar-valoracion" class="btn-agregar" onclick="agregarValoracion()">
+            <span>+</span> <!--Agregar Nueva Valoración-->
+        </button>
+
+        <!-- Modal Braden -->
+        <div id="modal-braden" class="modal lpp-modal">
+            <div class="modal-content modal-braden-compacto">
+                <div class="modal-header">
+                    <h2>Cálculo de Puntaje Braden</h2>
+                    <button class="btn-cerrar" onclick="cerrarModal('modal-braden')">&times;</button>
+                </div>
+                
+                <div class="braden-compacto" id="braden-compacto">
+                    <!-- Se generará dinámicamente -->
+                </div>
+                
+                <div class="braden-total">
+                    <h3>Puntaje Total Braden</h3>
+                    <div class="total-puntos" id="total-braden">0</div>
+                    <div id="clasificacion-riesgo"></div>
+                    <button class="btn-confirmar" onclick="confirmarBraden()">Confirmar Puntaje</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Medidas - Ahora muestra solo las medidas del riesgo correspondiente -->
+        <div id="modal-medidas" class="modal lpp-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="titulo-medidas">Medidas Preventivas Recomendadas</h2>
+                    <button class="btn-cerrar" onclick="cerrarModal('modal-medidas')">&times;</button>
+                </div>
+                
+                <div class="medidas-container" id="contenedor-medidas">
+                    <!-- Se llena dinámicamente según el riesgo -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="iaas.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-virus"></i> IAAS</h1>
+        </header>
+
+        <!-- Categorización y Precauciones -->
+        <div class="form-container">
+            <h2 class="section-title"><i class="fas fa-shield-virus"></i>Categorización y Precauciones</h2>
+            
+            <!-- Categorización -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="triage-category" class="required">Categoría de Triage</label>
+                    <select id="triage-category" name="triage-category" required>
+                        <option value="">Seleccione categoría</option>
+                        <option value="c1" class="triage-c1">C1 - Rojo (Emergencia)</option>
+                        <option value="c2" class="triage-c2">C2 - Naranja (Urgente)</option>
+                        <option value="c3" class="triage-c3">C3 - Amarillo (Urgencia menor)</option>
+                        <option value="c4" class="triage-c4">C4 - Verde (No urgente)</option>
+                        <option value="c5" class="triage-c5">C5 - Azul (Traslado)</option>
+                    </select>
+                    
+                </div>
+            </div>
+
+            <!-- Precauciones -->
+            <div class="field-group">
+                <div class="form-group">
+                    <label for="requires-precautions">¿Requiere precauciones?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="requires-precautions" value="si"> Sí
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="requires-precautions" value="no" checked> No
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Campos condicionales para precauciones -->
+                <div class="conditional-field" id="precautions-fields">
+                    <!-- Precauciones múltiples -->
+                    <div class="form-group">
+                        <label for="precautions">Precauciones requeridas</label>
+                        <div class="hint">Seleccione todas las que apliquen</div>
+                        <div class="multi-select" id="precautions-select">
+                            <div class="multi-select-option" data-value="guantes">Guantes</div>
+                            <div class="multi-select-option" data-value="pechera">Pechera</div>
+                            <div class="multi-select-option" data-value="antiparras">Antiparras</div>
+                            <div class="multi-select-option" data-value="kn95">Mascarilla KN95</div>
+                            <div class="multi-select-option" data-value="quirurgica">Mascarilla quirúrgica</div>
+                        </div>
+                        <input type="hidden" id="precautions" name="precautions">
+                    </div>
+
+                    <!-- Agente de transmisión -->
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="transmission-agent">Agente de transmisión</label>
+                            <select id="transmission-agent" name="transmission-agent">
+                                <option value="">Seleccione tipo</option>
+                                <option value="contacto">Contacto</option>
+                                <option value="gotas">Gotas</option>
+                                <option value="aerosoles">Aerosoles</option>
+                                <option value="mixto">Mixto</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="precaution-days">Días de precaución</label>
+                            <input type="number" id="precaution-days" name="precaution-days" min="1" max="30" placeholder="Ej: 7">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="iaas.js"></script>
+</body>
+</html>

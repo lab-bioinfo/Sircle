@@ -1,0 +1,432 @@
+/* Variables de colores y estilos */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-color: #f8fafc;
+    --dark-color: #1e293b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --section-bg: #f8fafc;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: var(--dark-color);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--primary-color);
+}
+
+h1 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Formulario principal */
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================================== */
+/* DISEÑO EN 2 FILAS: 2 ARRIBA, 1 ABAJO */
+/* =========================================== */
+
+.three-sections-horizontal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 columnas iguales */
+    grid-template-rows: auto auto;   /* 2 filas */
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Primera sección: Laboratorio - primera columna, primera fila */
+.three-sections-horizontal .section:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Segunda sección: Imagenología - segunda columna, primera fila */
+.three-sections-horizontal .section:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* Tercera sección: Interconsultas - ocupa ambas columnas en segunda fila */
+.three-sections-horizontal .section:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+/* Secciones generales */
+.section {
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alturas específicas para cada sección */
+.three-sections-horizontal .section:nth-child(1),
+.three-sections-horizontal .section:nth-child(2) {
+    min-height: 350px;  /* Altura para las dos de arriba */
+    max-height: 500px;
+}
+
+.three-sections-horizontal .section:nth-child(3) {
+    min-height: 300px;
+    max-height: none;
+}
+
+.horizontal-section {
+    margin-bottom: 0;
+    height: auto;
+    flex: 1;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border-color);
+    flex-shrink: 0; /* Evita que el header se reduzca */
+}
+
+.horizontal-section .section-header {
+    min-height: 60px;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+}
+
+.section-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.horizontal-section .section-header h2 {
+    font-size: 1.1rem;
+    white-space: normal;
+}
+
+/* Tablas */
+.table-container {
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+/* Alturas específicas para contenedores de tablas */
+.three-sections-horizontal .section:nth-child(1) .table-container.compact,
+.three-sections-horizontal .section:nth-child(2) .table-container.compact {
+    max-height: 350px;
+    min-height: 250px;
+}
+
+.three-sections-horizontal .section:nth-child(3) .table-container.compact {
+    max-height: 300px;
+    min-height: 200px;
+}
+
+.table-container.compact {
+    overflow-y: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.horizontal-section .data-table {
+    font-size: 0.9rem;
+}
+
+.data-table thead {
+    background-color: #e2e8f0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.data-table th {
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: #475569;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.horizontal-section .data-table th,
+.horizontal-section .data-table td {
+    padding: 0.6rem 0.5rem;
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.data-table td {
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Campos de formulario en tablas */
+.examen-select, .fecha-input, .control-input, .codigo-input, .observaciones-input {
+    width: 100%;
+    padding: 0.5rem 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    background-color: white;
+}
+
+.horizontal-section .examen-select,
+.horizontal-section .fecha-input.compact,
+.horizontal-section .codigo-input {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.85rem;
+    min-height: 38px;
+}
+
+.horizontal-section .fecha-input.compact {
+    min-width: 120px;
+}
+
+.examen-select:focus, .fecha-input:focus, .control-input:focus, .observaciones-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.codigo-input {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #475569;
+    text-align: center;
+}
+
+/* Botones */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-small {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: var(--dark-color);
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+}
+
+.btn-icon {
+    padding: 0.4rem;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon i {
+    font-size: 0.9rem;
+}
+
+/* Bordes de colores para distinguir secciones */
+.three-sections-horizontal .section:nth-child(1) {
+    border-left: 4px solid var(--primary-color);
+}
+
+.three-sections-horizontal .section:nth-child(2) {
+    border-left: 4px solid var(--warning-color);
+}
+
+.three-sections-horizontal .section:nth-child(3) {
+    border-left: 4px solid var(--success-color);
+}
+
+.section:nth-child(4) {
+    border-left: 4px solid #8b5cf6;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .three-sections-horizontal {
+        gap: 1rem;
+    }
+    
+    .three-sections-horizontal .section:nth-child(1),
+    .three-sections-horizontal .section:nth-child(2) {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* En pantallas medianas, cambiar a una columna */
+    .three-sections-horizontal {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .three-sections-horizontal .section:nth-child(1),
+    .three-sections-horizontal .section:nth-child(2),
+    .three-sections-horizontal .section:nth-child(3) {
+        grid-column: 1;
+        min-height: 300px;
+        max-height: 400px;
+    }
+    
+    .three-sections-horizontal .section:nth-child(1) {
+        grid-row: 1;
+    }
+    
+    .three-sections-horizontal .section:nth-child(2) {
+        grid-row: 2;
+    }
+    
+    .three-sections-horizontal .section:nth-child(3) {
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .three-sections-horizontal {
+        gap: 1rem;
+    }
+    
+    .section {
+        padding: 1rem;
+    }
+    
+    .three-sections-horizontal .section:nth-child(1),
+    .three-sections-horizontal .section:nth-child(2),
+    .three-sections-horizontal .section:nth-child(3) {
+        min-height: 250px;
+        max-height: 350px;
+    }
+    
+    .horizontal-section .data-table {
+        font-size: 0.85rem;
+    }
+    
+    .horizontal-section .data-table th,
+    .horizontal-section .data-table td {
+        padding: 0.5rem 0.4rem;
+    }
+    
+    .horizontal-section .examen-select,
+    .horizontal-section .fecha-input.compact,
+    .horizontal-section .codigo-input {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.8rem;
+        min-height: 36px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .section-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
+

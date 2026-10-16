@@ -1,0 +1,251 @@
+/* atencion.css - Versión optimizada */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    padding: 15px;
+    color: #333;
+}
+
+.atencion-enfermeria {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.atencion-enfermeria h2 {
+    color: #2c80ff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2c80ff;
+}
+
+.tablas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabla th {
+    background: #2c80ff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabla td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.tabla tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.tabla tbody tr:hover {
+    background: #edf2ff;
+}
+
+.subtitulo td {
+    background: #e3f2fd;
+    font-weight: 600;
+    color: #2c80ff;
+    border-bottom: 2px solid #2c80ff;
+}
+
+/* Formularios compactos */
+.select, select, .input-text, input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.select:focus, select:focus, input:focus {
+    outline: none;
+    border-color: #2c80ff;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+}
+
+/* Glasgow compacto */
+.glasgow-control {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background: #3d8b40;
+}
+
+.glasgow-resultado {
+    font-weight: 600;
+    color: #2c80ff;
+    font-size: 0.9rem;
+}
+
+.glasgow-total {
+    background: #e8f5e9 !important;
+    font-weight: 600;
+}
+
+.glasgow-total td:first-child {
+    color: #2c80ff;
+}
+
+/* Input porcentaje compacto */
+.input-porcentaje {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-porcentaje .input-number {
+    width: 70px;
+}
+
+.simbolo-porcentaje {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Modal compacto */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+/* ... otros estilos ... */
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 320px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding-top: 30px; 
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 0px;          
+    left: 370px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+    padding: 5px;      
+}
+
+
+
+.btn-cerrar:hover {
+    color: #333;
+}
+
+.modal-content h3 {
+    color: #2c80ff;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.modal-content select {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.modal-content button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px;
+}
+
+/* Contenedor LPP */
+#lpp-container {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e8eaed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tablas-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .tabla th, .tabla td {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 10px;
+    }
+}
+
+/* Colores para estados de Glasgow */
+#glasgow_clasificacion[data-severity="grave"] { color: #f44336; }
+#glasgow_clasificacion[data-severity="moderado"] { color: #ff9800; }
+#glasgow_clasificacion[data-severity="leve"] { color: #4caf50; }

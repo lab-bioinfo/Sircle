@@ -1,0 +1,642 @@
+/* Variables de colores y estilos */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-color: #f8fafc;
+    --dark-color: #1e293b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: var(--dark-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--success-color);
+}
+
+h1 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Formulario principal */
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    color: var(--success-color);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.section-description {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Sistema de 4 columnas */
+.four-columns-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.column {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.column:hover {
+    box-shadow: var(--shadow);
+}
+
+.column-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.column-header h3 {
+    font-size: 1rem;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.25rem;
+}
+
+.column-header .hint {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Formularios dentro de columnas */
+.form-group {
+    margin-bottom: 0.75rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+.required::after {
+    content: " *";
+    color: var(--danger-color);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: border 0.3s;
+    background-color: white;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* Grid compacto dentro de columnas */
+.form-grid.compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Checkbox group */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+}
+
+/* Textos de ayuda */
+.hint {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.1rem;
+}
+
+/* Botones */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0da271;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: var(--dark-color);
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+.btn-small {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.btn-small i {
+    font-size: 0.8rem;
+}
+
+/* Acciones del formulario */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Estilos para los optgroups del régimen */
+select optgroup {
+    font-weight: 600;
+    color: #475569;
+}
+
+select optgroup option {
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .four-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .four-columns-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid.compact {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    body {
+        padding: 10px;
+    }
+    
+    .form-container {
+        padding: 1rem;
+    }
+
+    .module-content {
+        padding: 10px;
+        min-height: 500px;
+    }
+    
+    form {
+        padding: 10px;
+    }
+}
+
+
+/* Estilos para scroll en select largos */
+.regimen-select {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Colores de énfasis para diferentes secciones */
+.column:nth-child(1) {
+    border-top: 3px solid #f59e0b;
+}
+
+.column:nth-child(2) {
+    border-top: 3px solid #3b82f6;
+}
+
+.column:nth-child(3) {
+    border-top: 3px solid #ef4444;
+}
+
+.column:nth-child(4) {
+    border-top: 3px solid #10b981;
+}
+/* ================================
+   FARMACOTERAPIA – LISTA DE MEDICAMENTOS
+   ================================ */
+
+.medicamentos-lista {
+    margin-top: 1rem;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+.medicamentos-lista h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* Tabla */
+#tabla-medicamentos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+#tabla-medicamentos thead {
+    background-color: #f1f5f9;
+}
+
+#tabla-medicamentos th {
+    text-align: left;
+    padding: 0.4rem;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    color: #475569;
+}
+
+#tabla-medicamentos td {
+    padding: 0.35rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+/* Inputs dentro de la tabla */
+#tabla-medicamentos input,
+#tabla-medicamentos select {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    height: 28px;
+}
+
+/* Columna acciones */
+.tabla-acciones {
+    display: flex;
+    gap: 0.3rem;
+}
+
+/* Botones de acción pequeños */
+.btn-icon {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.2rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.btn-icon.edit {
+    color: var(--primary-color);
+}
+
+.btn-icon.delete {
+    color: var(--danger-color);
+}
+
+.btn-icon:hover {
+    background-color: #e5e7eb;
+}
+
+/* Hover fila */
+#tabla-medicamentos tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* =========================
+   MODAL MEDICAMENTOS
+========================= */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    width: 95%;
+    height: 90%;
+    margin: auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    flex: 1;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.tabla-medicamentos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-medicamentos th,
+.tabla-medicamentos td {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.tabla-medicamentos th {
+    background: #f1f5f9;
+}
+
+.tabla-medicamentos input,
+.tabla-medicamentos select {
+    width: 100%;
+}
+
+.dosis-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dosis-group input {
+    flex: 1;
+}
+
+.dosis-group .unidad {
+    font-size: 0.85rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+.kinesio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.checkbox-card {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.4rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.checkbox-card:hover {
+    background-color: #f1f5f9;
+}
+
+.dosis-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dosis-container input {
+  width: 90px;
+}
+
+.unidad {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+
+/* En cada módulo */
+.module-content {
+    width: 100%;
+    min-height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Para tablas o contenido ancho */
+.scrollable-content {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Estilos generales del formulario */
+form {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ================================
+   ESTILOS PARA MÚLTIPLES MODALES
+   ================================ */
+
+/* Botones inline en columnas */
+.form-actions-inline {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.form-actions-inline .btn {
+    flex: 1;
+    justify-content: center;
+}
+
+/* Tablas en modales */
+.tabla-medicamentos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabla-medicamentos th {
+    background-color: #f1f5f9;
+    text-align: left;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    color: #475569;
+}
+
+.tabla-medicamentos td {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.tabla-medicamentos input,
+.tabla-medicamentos select {
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 0.85rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.tabla-medicamentos input:focus,
+.tabla-medicamentos select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.tabla-medicamentos tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Botones en tablas */
+.tabla-medicamentos .btn-small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Responsive para tablas */
+@media (max-width: 768px) {
+    .tabla-medicamentos {
+        font-size: 0.8rem;
+    }
+    
+    .tabla-medicamentos th,
+    .tabla-medicamentos td {
+        padding: 0.4rem;
+    }
+    
+    .form-actions-inline {
+        flex-direction: column;
+    }
+}
+
+
+

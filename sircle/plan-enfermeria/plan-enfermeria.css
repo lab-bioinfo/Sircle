@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.module-header h1 {
+    font-size: 22px;
+    color: #2c7be5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.section-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    border: none;
+    background: #e9ecef;
+    color: #333;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.chip:hover {
+    background: #dce1e6;
+}
+
+.chip.active {
+    background: #2c7be5;
+    color: white;
+}
+
+.chip-otros.active {
+    background: #6f42c1;
+}
+
+.otros-container {
+    display: none;
+    margin-top: 12px;
+}
+
+.otros-container textarea {
+    width: 100%;
+    min-height: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+

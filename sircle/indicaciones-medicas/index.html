@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicaciones Médicas - Múltiples Días</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="indicaciones.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <div class="encabezado-modulo">
+            <h2 class="section-title">
+                <i class="fas fa-prescription"></i> Indicaciones Médicas
+            </h2>
+            <!--
+            <button type="button" class="btn-duplicar" id="duplicar-todo">
+                <i class="fas fa-copy"></i> Duplicar todo (nuevo día)
+            </button>-->
+        </div> 
+
+        <div id="bloques-container"></div>
+    </div>
+</div>
+
+<div id="modal-regimenes" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-utensils"></i> Regímenes indicados</h2>
+            <button class="btn-close" onclick="cerrarModalGlobal('regimenes')">✖</button>
+        </div>
+        <div class="modal-body">
+            <table class="tabla-medicamentos">
+                <thead><tr><th>Tipo</th><th>Acciones</th></tr></thead>
+                <tbody id="modal-tabla-regimenes"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="modal-reposos" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-bed"></i> Reposos indicados</h2>
+            <button class="btn-close" onclick="cerrarModalGlobal('reposos')">✖</button>
+        </div>
+        <div class="modal-body">
+            <table class="tabla-medicamentos">
+                <thead><tr><th>Tipo</th><th>Acciones</th></tr></thead>
+                <tbody id="modal-tabla-reposos"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="modal-medicamentos" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-pills"></i> Medicamentos indicados</h2>
+            <button class="btn-close" onclick="cerrarModalGlobal('medicamentos')">✖</button>
+        </div>
+        <div class="modal-body">
+            <table class="tabla-medicamentos" id="tabla-medicamentos-editable">
+                <thead>
+                    <tr>
+                        <th>Medicamento</th><th>Dosis</th><th>Unidad</th><th>Vía</th><th>Frecuencia</th>
+                        <th>Hora inicio</th><th>Horarios / Checks</th><th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="modal-tabla-medicamentos"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="indicaciones.js"></script>
+</body>
+</html>

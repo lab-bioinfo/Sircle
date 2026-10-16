@@ -1,0 +1,37 @@
+{
+  "caracteristicas_orina": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "normal", "display": "Normal" },
+    { "value": "oliguria", "display": "Oliguria" },
+    { "value": "poliuria", "display": "Poliuria" },
+    { "value": "anuria", "display": "Anuria" },
+    { "value": "incontinencia", "display": "Incontinencia" },
+    { "value": "sonda_vesical", "display": "Sonda vesical" }
+  ],
+  "caracteristicas_vomitos": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "no_presenta", "display": "No presenta" },
+    { "value": "ocasionales", "display": "Ocasionales" },
+    { "value": "frecuentes", "display": "Frecuentes" },
+    { "value": "alimentarios", "display": "Alimentarios" },
+    { "value": "biliosos", "display": "Biliosos" },
+    { "value": "ematicos", "display": "Hemáticos" }
+  ],
+  "caracteristicas_deposiciones": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "normales", "display": "Normales" },
+    { "value": "constipacion", "display": "Constipación" },
+    { "value": "diarrea", "display": "Diarrea" },
+    { "value": "incontinencia_fecal", "display": "Incontinencia fecal" },
+    { "value": "ausentes", "display": "Ausentes" },
+    { "value": "ostomia", "display": "Ostomía" }
+  ],
+  "caracteristicas_otros": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "no_presenta", "display": "No presenta" },
+    { "value": "sudoracion_excesiva", "display": "Sudoración excesiva" },
+    { "value": "drenajes", "display": "Drenajes" },
+    { "value": "ostomias", "display": "Ostomías" },
+    { "value": "otros", "display": "Otros" }
+  ]
+}

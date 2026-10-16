@@ -1,0 +1,76 @@
+{
+  "triage_categoria": [
+    {
+      "value": "",
+      "display": "Seleccione categoría"
+    },
+    {
+      "value": "c1",
+      "display": "C1 - Rojo (Emergencia)"
+    },
+    {
+      "value": "c2",
+      "display": "C2 - Naranja (Urgente)"
+    },
+    {
+      "value": "c3",
+      "display": "C3 - Amarillo (Urgencia menor)"
+    },
+    {
+      "value": "c4",
+      "display": "C4 - Verde (No urgente)"
+    },
+    {
+      "value": "c5",
+      "display": "C5 - Azul (Traslado)"
+    }
+  ],
+  "precauciones": [
+    {
+      "value": "guantes",
+      "display": "Guantes"
+    },
+    {
+      "value": "pechera",
+      "display": "Pechera"
+    },
+    {
+      "value": "antiparras",
+      "display": "Antiparras"
+    },
+    {
+      "value": "kn95",
+      "display": "Mascarilla KN95"
+    },
+    {
+      "value": "quirurgica",
+      "display": "Mascarilla quirúrgica"
+    }
+  ],
+  "agente_transmision": [
+    {
+      "value": "",
+      "display": "Seleccione tipo"
+    },
+    {
+      "value": "contacto",
+      "display": "Contacto"
+    },
+    {
+      "value": "gotas",
+      "display": "Gotas"
+    },
+    {
+      "value": "aerosoles",
+      "display": "Aerosoles"
+    },
+    {
+      "value": "mixto",
+      "display": "Mixto"
+    },
+    {
+      "value": "otro",
+      "display": "Otro"
+    }
+  ]
+}

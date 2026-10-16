@@ -1,0 +1,217 @@
+/* balance.css - Versión compacta */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 15px;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #2c80ff;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2c80ff;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1rem;
+    color: #2c80ff;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #f8fafc;
+    border-radius: 4px;
+    border-left: 3px solid #2c80ff;
+    font-weight: 600;
+}
+
+.balance-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+    .balance-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.balance-block {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    padding: 15px;
+    border: 1px solid #e8eaed;
+}
+
+.balance-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.balance-table thead {
+    background: #2c80ff;
+    color: white;
+}
+
+.balance-table th {
+    padding: 8px 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.balance-table th:first-child {
+    text-align: left;
+    padding-left: 10px;
+    width: 120px;
+}
+
+.balance-table th:last-child {
+    border-right: none;
+}
+
+.balance-table tbody tr {
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.balance-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.balance-table td {
+    padding: 6px;
+    text-align: center;
+    border-right: 1px solid #e8eaed;
+}
+
+.balance-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    padding-left: 10px;
+    width: 120px;
+}
+
+.balance-table td:last-child {
+    border-right: none;
+}
+
+input[type="number"] {
+    width: 100%;
+    min-width: 60px;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #2c80ff;
+}
+
+.row-total-day,
+.row-total-night {
+    font-weight: bold;
+    background: #f0f7ff;
+    color: #2c80ff;
+    border-left: 2px solid #2c80ff;
+    font-size: 0.9rem;
+}
+
+.row-total-day {
+    border-left-color: #4caf50;
+    background: #f0f9f0;
+}
+
+.row-total-night {
+    border-left-color: #2196f3;
+    background: #e3f2fd;
+}
+
+.total-row td {
+    padding: 8px 6px;
+    font-size: 0.9rem;
+}
+
+/* ================= BALANCE SUMMARY ================= */
+.balance-summary {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    margin-top: 20px;
+    background: white;
+}
+
+.balance-summary thead {
+    background: #2c80ff;
+    color: white;
+}
+
+.balance-summary th {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.balance-summary tbody tr {
+    border-bottom: 1px solid #e8eaed;
+}
+
+.balance-summary td {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.balance-summary td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #2c80ff;
+    padding-left: 15px;
+    width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .balance-wrapper {
+        gap: 10px;
+    }
+    
+    .balance-block {
+        padding: 12px;
+    }
+    
+    .balance-table {
+        font-size: 0.8rem;
+    }
+    
+    .balance-table th,
+    .balance-table td {
+        padding: 5px 4px;
+        min-width: 70px;
+    }
+    
+    .balance-summary th,
+    .balance-summary td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}

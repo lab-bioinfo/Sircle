@@ -1,0 +1,74 @@
+/* eliminacion.css - Estilo compacto y ordenado */
+
+.elimination-section {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #2c80ff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.elimination-section h3 {
+    color: #2c80ff;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-align: left;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.elimination-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.elimination-table tbody tr {
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.elimination-table td {
+    padding: 8px 10px;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.elimination-table label {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.elimination-table select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    background: white;
+    color: #333;
+}
+
+.elimination-table select:focus {
+    outline: none;
+    border-color: #2c80ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .elimination-table td {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 6px 0;
+    }
+    
+    .elimination-table tbody tr {
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid #e8eaed;
+    }
+}

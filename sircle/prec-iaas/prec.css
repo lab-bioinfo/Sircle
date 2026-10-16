@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 15px;
+    color: #333;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+header {
+    background: #2c80ff;
+    color: white;
+    padding: 15px 20px;
+    border-bottom: 2px solid #1a6fe6;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f8fafc;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #2c80ff;
+    border-bottom: 2px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+.seccion {
+    background: #f0f7ff;
+    color: #2c80ff;
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-left: 4px solid #2c80ff;
+}
+
+td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #edf2f7;
+    vertical-align: top;
+}
+
+.accion {
+    width: 60%;
+    padding: 8px 0;
+}
+
+.obs {
+    width: 40%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+select,
+textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+}
+
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2c80ff;
+    box-shadow: 0 0 0 2px rgba(44, 128, 255, 0.1);
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+    min-height: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Estilo para las opciones del select */
+select option {
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+/* Estilo para radio groups dentro de la tabla */
+.accion .radio-group {
+    display: inline-flex;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.accion .radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Hover para filas */
+tr:not(:first-child):hover {
+    background-color: #f8fafc;
+}
+
+.titulo {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        border-radius: 6px;
+    }
+    
+    .accion,
+    .obs {
+        width: auto;
+        display: block;
+    }
+    
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .seccion {
+        display: block;
+        width: 100%;
+    }
+    
+    .accion {
+        padding: 10px 0;
+    }
+    
+    .obs {
+        padding-top: 0;
+    }
+    
+    .botones {
+        text-align: center;
+        padding: 15px;
+    }
+    
+    button {
+        margin: 5px;
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.1rem;
+    }
+    
+    th, td {
+        padding: 8px 12px;
+    }
+    
+    .seccion {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    select, textarea {
+        padding: 6px 10px;
+    }
+    
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

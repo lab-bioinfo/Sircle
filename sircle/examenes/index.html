@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exámenes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="examenes.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-vial"></i>Exámenes</h1>
+        </header>
+
+        <div class="form-container">
+            <div class="three-sections-horizontal">
+                <div class="section horizontal-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-microscope"></i> Exámenes Laboratorio</h2>
+                        <button type="button" class="btn btn-primary btn-small" id="agregar-lab">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="table-container compact">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th width="45%">Examen</th>
+                                    <th width="40%">Código</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="laboratorio-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="section horizontal-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-x-ray"></i> Exámenes Imagenología</h2>
+                        <button type="button" class="btn btn-primary btn-small" id="agregar-img">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="table-container compact">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th width="85%">Estudio</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="imagenologia-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="section horizontal-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-user-md"></i> Exámenes e Interconsultas</h2>
+                        <button type="button" class="btn btn-primary btn-small" id="agregar-interconsulta">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <div class="table-container compact">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th width="85%">Tipo</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="interconsultas-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section full-width-section" style="margin-top: 20px;">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-line"></i> Controles Seriados</h2>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary btn-small" id="agregar-control-hgt">HGT</button>
+                        <button type="button" class="btn btn-secondary btn-small" id="agregar-control-insulina">Insulina + via</button>
+                        <button type="button" class="btn btn-secondary btn-small" id="agregar-control-bic-insulina">BIC Insulina</button>
+                        <button type="button" class="btn btn-secondary btn-small" id="agregar-control-sg">SG%</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Valor</th>
+                                <th>Unidad</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="controles-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="examenes.js"></script>
+</body>
+</html>

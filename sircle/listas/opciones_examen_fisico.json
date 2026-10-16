@@ -1,0 +1,34 @@
+{
+    "llene_capilar": [
+        {"value": "", "display": "Seleccione"},
+        {"value": "menor_2s", "display": "<2s"},
+        {"value": "mayor_2s", "display": ">2s"}
+    ],
+    "coloracion": [
+        {"value": "", "display": "Seleccione"},
+        {"value": "rosada", "display": "Rosada"},
+        {"value": "palida", "display": "Pálida"},
+        {"value": "cianotica", "display": "Cianótica"},
+        {"value": "enrojecida", "display": "Enrojecida"},
+        {"value": "otros", "display": "Otros"}
+    ],
+    "temperatura": [
+        {"value": "", "display": "Seleccione"},
+        {"value": "tibia", "display": "Tibia"},
+        {"value": "fria", "display": "Fría"},
+        {"value": "calor_local", "display": "Calor local"},
+        {"value": "otros", "display": "Otros"}
+    ],
+    "edema": [
+        {"value": "", "display": "Seleccione"},
+        {"value": "sin_edema", "display": "Sin edema"},
+        {"value": "x", "display": "Edema X"},
+        {"value": "xx", "display": "Edema XX"},
+        {"value": "xxx", "display": "Edema XXX"}
+    ],
+    "pulsos": [
+        {"value": "", "display": "Seleccione"},
+        {"value": "presentes", "display": "Presentes"},
+        {"value": "ausentes", "display": "Ausentes"}
+    ]
+}

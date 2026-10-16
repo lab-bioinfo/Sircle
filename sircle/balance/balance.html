@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Balance Hídrico y Eliminación</title>
+    <link rel="stylesheet" href="balance.css">
+</head>
+<body>
+
+<h2>Balance Hídrico y Medición de Diuresis</h2>
+
+<div class="balance-wrapper">
+
+    <!-- ================= INGRESOS ================= -->
+    <div class="balance-block">
+        <h3>Ingresos</h3>
+
+        <table class="balance-table">
+            <thead>
+                <tr>
+                    <th>Concepto</th>
+                    <th>08:00–12:00</th>
+                    <th>12:00–18:00</th>
+                    <th>18:00–20:00</th>
+                    <th>20:00–08:00</th>
+                    <th>Total 12h</th>
+                    <th>Total 12h</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-group="ingresos">
+                    <td>Alimentación</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="ingresos">
+                    <td>Hidratación</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="ingresos">
+                    <td>Suero</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="ingresos">
+                    <td>Transfusión</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="ingresos">
+                    <td>Tratamiento</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="ingresos">
+                    <td>Otros</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+
+                <tr class="total-row">
+                    <td>TOTAL INGRESOS</td>
+                    <td></td><td></td><td></td><td></td>
+                    <td id="ing-12a">0</td>
+                    <td id="ing-12b">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= EGRESOS ================= -->
+    <div class="balance-block">
+        <h3>Egresos</h3>
+
+        <table class="balance-table">
+            <thead>
+                <tr>
+                    <th>Concepto</th>
+                    <th>08:00–12:00</th>
+                    <th>12:00–18:00</th>
+                    <th>18:00–20:00</th>
+                    <th>20:00–08:00</th>
+                    <th>Total 12h</th>
+                    <th>Total 12h</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-group="egresos">
+                    <td>Orina</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="egresos">
+                    <td>Deposiciones</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="egresos">
+                    <td>Contenido gástrico</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="egresos">
+                    <td>Drenaje</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="egresos">
+                    <td>Diur. horaria</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="egresos">
+                    <td>Pérdidas insensibles</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+                <tr data-group="egresos">
+                    <td>Otros</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td class="row-total-day">0</td>
+                    <td class="row-total-night">0</td>
+                </tr>
+
+                <tr class="total-row">
+                    <td>TOTAL EGRESOS</td>
+                    <td></td><td></td><td></td><td></td>
+                    <td id="egr-12a">0</td>
+                    <td id="egr-12b">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- ================= BALANCE HÍDRICO ================= -->
+<table class="balance-summary">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Total 12h</th>
+            <th>Total 12h</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>BALANCE HÍDRICO 12 HORAS</td>
+            <td id="bal-12a">0</td>
+            <td id="bal-12b">0</td>
+        </tr>
+        <tr>
+            <td>BALANCE HÍDRICO 24 HORAS</td>
+            <td colspan="2" id="bal-24">0</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Características de la eliminación -->
+<div id="eliminacion-container"></div>
+
+
+<script src="balance.js"></script>
+</body>
+</html>

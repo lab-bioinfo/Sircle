@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Invasivos - Múltiples Días</title>
+    <link rel="stylesheet" href="invasivos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="section-header">
+                <h2><i class="fas fa-tools"></i> Elementos Invasivos</h2>
+                <button type="button" class="btn btn-secondary btn-small" id="duplicar-todos">
+                    <i class="fas fa-copy"></i>Agregar nuevo
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table class="invasive-table">
+                    
+                    <!-- Bloque 1 (se actualizará la fecha con JS) -->
+                    <tbody class="bloque-dia" data-bloque="1">
+                        <tr class="fecha-bloque">
+                            <td colspan="7">
+                                <div class="fecha-contenedor">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span class="fecha-texto"></span> <!-- Vacío, se llenará con JS -->
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="titulos-bloque">
+                            <th width="18%">Elemento</th>
+                            <th width="12%">¿Instalado?</th>
+                            <th width="14%">Días instalado</th>
+                            <th width="15%">Calibre</th>
+                            <th width="20%">Ubicación anatómica</th>
+                            <th width="12%">Código</th>
+                            <th width="9%">Responsable</th>
+                        </tr>
+                    
+                        <!-- VVP -->
+                        <tr class="elemento-row" data-elemento="vvp">
+                            <td class="elemento-nombre"><strong>VVP</strong></td>
+                            <td><select class="instalado-select" name="instalado_vvp"><option value="no" selected>No</option><option value="si">Sí</option></select></td>
+                            <td><input type="number" class="dias-input" name="dias_vvp" min="0" max="30" disabled></td>
+                            <td><select class="calibre-select" name="calibre_vvp" disabled><option value="">Seleccione...</option><option value="14g">14G</option><option value="16g">16G</option><option value="18g">18G</option><option value="20g">20G</option><option value="22g">22G</option><option value="24g">24G</option><option value="otro">Otro</option></select></td>
+                            <td><select class="ubicacion-select" name="ubicacion_vvp" disabled><option value="">Seleccione...</option><option value="msd">MSD</option><option value="msi">MSI</option><option value="mid">MID</option><option value="mii">MII</option><option value="otra">Otra</option></select></td>
+                            <td><input type="text" class="codigo-input" name="codigo_vvp" maxlength="10" disabled></td>
+                            <td><input type="text" class="responsable-input" name="responsable_vvp" disabled></td>
+                        </tr>
+                        <!-- CUP -->
+                        <tr class="elemento-row" data-elemento="cup">
+                            <td class="elemento-nombre"><strong>CUP</strong></td>
+                            <td><select class="instalado-select" name="instalado_cup"><option value="no" selected>No</option><option value="si">Sí</option></select></td>
+                            <td><input type="number" class="dias-input" name="dias_cup" min="0" max="30" disabled></td>
+                            <td><select class="calibre-select" name="calibre_cup" disabled><option value="">Seleccione...</option><option value="12ch">12CH</option><option value="14ch">14CH</option><option value="16ch">16CH</option><option value="18ch">18CH</option><option value="20ch">20CH</option><option value="22ch">22CH</option><option value="otro">Otro</option></select></td>
+                            <td><select class="ubicacion-select" name="ubicacion_cup" disabled><option value="">Seleccione...</option><option value="uretra_masculina">Uretra masculina</option><option value="uretra_femenina">Uretra femenina</option><option value="suprapubico">Suprapúbico</option><option value="otra">Otra</option></select></td>
+                            <td><input type="text" class="codigo-input" name="codigo_cup" maxlength="10" disabled></td>
+                            <td><input type="text" class="responsable-input" name="responsable_cup" disabled></td>
+                        </tr>
+                        <!-- SNG -->
+                        <tr class="elemento-row" data-elemento="sng">
+                            <td class="elemento-nombre"><strong>SNG</strong></td>
+                            <td><select class="instalado-select" name="instalado_sng"><option value="no" selected>No</option><option value="si">Sí</option></select></td>
+                            <td><input type="number" class="dias-input" name="dias_sng" min="0" max="30" disabled></td>
+                            <td><select class="calibre-select" name="calibre_sng" disabled><option value="">Seleccione...</option><option value="8fr">8Fr</option><option value="10fr">10Fr</option><option value="12fr">12Fr</option><option value="14fr">14Fr</option><option value="16fr">16Fr</option><option value="18fr">18Fr</option><option value="otro">Otro</option></select></td>
+                            <td><select class="ubicacion-select" name="ubicacion_sng" disabled><option value="">Seleccione...</option><option value="fosa_nasal_derecha">Fosa nasal derecha</option><option value="fosa_nasal_izquierda">Fosa nasal izquierda</option><option value="oral">Oral</option><option value="otra">Otra</option></select></td>
+                            <td><input type="text" class="codigo-input" name="codigo_sng" maxlength="10" disabled></td>
+                            <td><input type="text" class="responsable-input" name="responsable_sng" disabled></td>
+                        </tr>
+                        <!-- L.A. -->
+                        <tr class="elemento-row" data-elemento="la">
+                            <td class="elemento-nombre"><strong>L.A.</strong></td>
+                            <td><select class="instalado-select" name="instalado_la"><option value="no" selected>No</option><option value="si">Sí</option></select></td>
+                            <td><input type="number" class="dias-input" name="dias_la" min="0" max="30" disabled></td>
+                            <td><select class="calibre-select" name="calibre_la" disabled><option value="">Seleccione...</option><option value="20g">20G</option><option value="22g">22G</option><option value="24g">24G</option><option value="otro">Otro</option></select></td>
+                            <td><select class="ubicacion-select" name="ubicacion_la" disabled><option value="">Seleccione...</option><option value="radial_derecha">Radial derecha</option><option value="radial_izquierda">Radial izquierda</option><option value="femoral_derecha">Femoral derecha</option><option value="femoral_izquierda">Femoral izquierda</option><option value="humeral">Humeral</option><option value="otra">Otra</option></select></td>
+                            <td><input type="text" class="codigo-input" name="codigo_la" maxlength="10" disabled></td>
+                            <td><input type="text" class="responsable-input" name="responsable_la" disabled></td>
+                        </tr>
+                        <!-- CVC -->
+                        <tr class="elemento-row" data-elemento="cvc">
+                            <td class="elemento-nombre"><strong>CVC</strong></td>
+                            <td><select class="instalado-select" name="instalado_cvc"><option value="no" selected>No</option><option value="si">Sí</option></select></td>
+                            <td><input type="number" class="dias-input" name="dias_cvc" min="0" max="30" disabled></td>
+                            <td><select class="calibre-select" name="calibre_cvc" disabled><option value="">Seleccione...</option><option value="5fr">5Fr</option><option value="6fr">6Fr</option><option value="7fr">7Fr</option><option value="8fr">8Fr</option><option value="9fr">9Fr</option><option value="otro">Otro</option></select></td>
+                            <td><select class="ubicacion-select" name="ubicacion_cvc" disabled><option value="">Seleccione...</option><option value="yugular_interna_derecha">Yugular int. derecha</option><option value="yugular_interna_izquierda">Yugular int. izquierda</option><option value="subclavia_derecha">Subclavia derecha</option><option value="subclavia_izquierda">Subclavia izquierda</option><option value="femoral_derecha">Femoral derecha</option><option value="femoral_izquierda">Femoral izquierda</option><option value="otra">Otra</option></select></td>
+                            <td><input type="text" class="codigo-input" name="codigo_cvc" maxlength="10" disabled></td>
+                            <td><input type="text" class="responsable-input" name="responsable_cvc" disabled></td>
+                        </tr>
+                        <!-- TET -->
+                        <tr class="elemento-row" data-elemento="tet">
+                            <td class="elemento-nombre"><strong>TET</strong></td>
+                            <td><select class="instalado-select" name="instalado_tet"><option value="no" selected>No</option><option value="si">Sí</option></select></td>
+                            <td><input type="number" class="dias-input" name="dias_tet" min="0" max="30" disabled></td>
+                            <td><select class="calibre-select" name="calibre_tet" disabled><option value="">Seleccione...</option><option value="6_0">6.0</option><option value="6_5">6.5</option><option value="7_0">7.0</option><option value="7_5">7.5</option><option value="8_0">8.0</option><option value="8_5">8.5</option><option value="otro">Otro</option></select></td>
+                            <td><select class="ubicacion-select" name="ubicacion_tet" disabled><option value="">Seleccione...</option><option value="orotraqueal">Orotraqueal</option><option value="nasotraqueal">Nasotraqueal</option><option value="traqueostomia">Traqueostomía</option><option value="otra">Otra</option></select></td>
+                            <td><input type="text" class="codigo-input" name="codigo_tet" maxlength="10" disabled></td>
+                            <td><input type="text" class="responsable-input" name="responsable_tet" disabled></td>
+                        </tr>
+                        <!-- Drenaje -->
+                        <tr class="elemento-row" data-elemento="drenaje">
+                            <td class="elemento-nombre"><strong>Drenaje</strong></td>
+                            <td><select class="instalado-select" name="instalado_drenaje"><option value="no" selected>No</option><option value="si">Sí</option></select></td>
+                            <td><input type="number" class="dias-input" name="dias_drenaje" min="0" max="30" disabled></td>
+                            <td><select class="calibre-select" name="calibre_drenaje" disabled><option value="">Seleccione...</option><option value="10fr">10Fr</option><option value="12fr">12Fr</option><option value="14fr">14Fr</option><option value="16fr">16Fr</option><option value="18fr">18Fr</option><option value="20fr">20Fr</option><option value="24fr">24Fr</option><option value="28fr">28Fr</option><option value="otro">Otro</option></select></td>
+                            <td><select class="ubicacion-select" name="ubicacion_drenaje" disabled><option value="">Seleccione...</option><option value="abdominal">Abdominal</option><option value="toracico">Torácico</option><option value="pelvico">Pélvico</option><option value="subcutaneo">Subcutáneo</option><option value="otra">Otra</option></select></td>
+                            <td><input type="text" class="codigo-input" name="codigo_drenaje" maxlength="10" disabled></td>
+                            <td><input type="text" class="responsable-input" name="responsable_drenaje" disabled></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="invasivos.js"></script>
+</body>
+</html>

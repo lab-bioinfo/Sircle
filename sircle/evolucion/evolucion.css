@@ -1,0 +1,251 @@
+/* =========================================
+   MÓDULO EVOLUCIÓN
+========================================= */
+
+.evolucion-module {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.evolucion-bloque {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.evolucion-titulo {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2c80ff;
+  font-size: 1.1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #2c80ff;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   TURNOS
+========================================= */
+
+.turnos-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.turno {
+  background: #f8fafc;
+  border-radius: 6px;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+}
+
+.turno-titulo {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.turno-titulo::before {
+  content: "⏰";
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   TABLA EVOLUCIÓN - CORREGIDO
+========================================= */
+
+.tabla-evolucion {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.tabla-evolucion th {
+  background: #2c80ff;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.tabla-evolucion td {
+  padding: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.tabla-evolucion tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+/* =========================================
+   INPUTS Y TEXTAREAS - CORREGIDO
+========================================= */
+
+.tabla-evolucion input[type="time"],
+.tabla-evolucion input[type="text"],
+.tabla-evolucion textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 0.75rem 0.75rem;
+  border: none !important;
+  border-radius: 0;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+}
+
+.tabla-evolucion input[type="time"]:focus,
+.tabla-evolucion input[type="text"]:focus,
+.tabla-evolucion textarea:focus {
+  background: #fff;
+  box-shadow: inset 0 0 0 2px #2c80ff;
+}
+
+.tabla-evolucion input[type="time"],
+.tabla-evolucion input[type="text"] {
+  height: 44px;
+  min-height: auto;
+}
+
+.tabla-evolucion textarea {
+  min-height: 60px;
+}
+
+/* =========================================
+   BOTÓN AGREGAR
+========================================= */
+
+.btn-agregar-registro {
+  background: #2c80ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.btn-agregar-registro:hover {
+  background: #1a6fe6;
+}
+
+.btn-agregar-registro::before {
+  content: "+";
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* =========================================
+   COLUMNA ACCIÓN - CORREGIDO
+========================================= */
+
+.col-accion {
+  width: 50px;
+  text-align: center;
+  padding: 0.5rem !important;
+  background: white !important;
+}
+
+.btn-eliminar-registro {
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+
+.btn-eliminar-registro:hover {
+  background: #cc0000;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .turnos-contenedor {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .evolucion-bloque {
+    padding: 1rem;
+  }
+  
+  .tabla-evolucion th,
+  .tabla-evolucion td {
+    font-size: 0.85rem;
+  }
+  
+  .col-accion {
+    display: none;
+  }
+  
+  .btn-eliminar-registro {
+    width: 26px;
+    height: 26px;
+    font-size: 0.7rem;
+  }
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS POR TIPO
+========================================= */
+
+.evolucion-bloque[data-tipo="tecnico"] {
+  border-left: 4px solid #4CAF50;
+}
+
+.evolucion-bloque[data-tipo="enfermera"] {
+  border-left: 4px solid #2196F3;
+}
+
+/* =========================================
+   HOVER EFFECTS
+========================================= */
+
+.turno:hover {
+  border-color: #2c80ff;
+  box-shadow: 0 4px 6px rgba(44, 128, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tabla-evolucion tr:hover input,
+.tabla-evolucion tr:hover textarea {
+  background: #f0f7ff;
+}

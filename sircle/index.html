@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRCLE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+    <!-- Barra Superior con Módulos -->
+    <nav class="top-navbar">
+        <div class="nav-container">
+
+            <header class="module-header" >
+                <h1> SIRCLE </h1>
+            </header>
+            <div class="user-profile">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Enf. Admin</span>
+                </div>
+                <button class="btn-logout" id="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i> Salir
+                </button>
+            </div>
+            <!-- Navegación directa por módulos -->
+            <div class="direct-modules-nav">
+                <a href="#ingreso" class="module-link active" data-module="ingreso">
+                    <i class="fas fa-user-injured"></i> Ingreso
+                </a>
+                <a href="#iaas" class="module-link" data-module="iaas">
+                    <i class="fas fa-shield-virus"></i> IAAS
+                </a>
+                <a href="#elementos" class="module-link" data-module="elementos">
+                    <i class="fas fa-procedures"></i> Invasivos
+                </a>
+                <a href="#indicaciones" class="module-link" data-module="indicaciones">
+                    <i class="fas fa-file-medical-alt"></i> Indicaciones
+                </a>
+                <a href="#examenes" class="module-link" data-module="examenes">
+                    <i class="fas fa-vial"></i> Exámenes
+                </a>
+                <a href="#control-signos" class="module-link" data-module="control-signos">
+                    <i class="fas fa-clipboard-list"></i> Control de Signos
+                </a>
+                <a href="#balance-hidrico" class="module-link" data-module="balance">
+                    <i class="fas fa-droplet"></i> Balance Hidrico
+                </a>
+                <a href="#examen-fisico" class="module-link" data-module="examen-fisico">
+                    <i class="fas fa-person-walking"></i> Examen Físico
+                </a>
+                <a href="#plan-enfermeria" class="module-link" data-module="plan-enfermeria">
+                    <i class="fas fa-user-nurse"></i> Plan de Enfermería
+                </a>
+                <a href="#atencion-enfermeria" class="module-link" data-module="atencion-1">
+                    <i class="fas fa-stethoscope"></i> Atencion de Enfermeria
+                </a>
+                <a href="#prec-iaas" class="module-link" data-module="prec-iaas">
+                    <i class="fas fa-user-injured"></i> Prevencion IAAS
+                </a>
+                <a href="#" class="module-link" data-module="evolucion">
+                    <i class="fas fa-heartbeat"></i>
+                <span>Evolución</span>
+                </a>
+                <a href="#hhha" class="module-link" data-module="hhha">
+                    <i class="fas fa-clipboard-list"></i> Indicadores HHHA
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Contenedor del Módulo Actual -->
+        <div class="module-container" id="module-container">
+            <iframe src="ingreso/index.html" frameborder="0" id="module-frame"></iframe>
+        </div>
+    </main>
+
+    <!-- Barra Inferior de Navegación -->
+    <div class="bottom-navbar">
+        <div class="nav-controls">
+            <button class="btn-nav btn-prev" id="btn-anterior">
+                <i class="fas fa-arrow-left"></i> Anterior
+            </button>
+            
+            
+            <button class="btn-nav btn-next" id="btn-siguiente">
+                Siguiente <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div class="nav-actions">
+            <button class="btn-action btn-clear" id="btn-limpiar-modulo">
+                <i class="fas fa-eraser"></i> Limpiar módulo
+            </button>
+            <button class="btn-action btn-new-patient" id="btn-nuevo-paciente">
+                <i class="fas fa-user-plus"></i> Nuevo paciente
+            </button>
+            <button class="btn-action btn-finalize" id="btn-finalizar">
+                <i class="fas fa-flag-checkered"></i> Previsualizar
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de Vista Previa -->
+    <div class="modal" id="preview-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-eye"></i> Vista Previa del Ingreso</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modules-status" id="modules-status">
+                    <!-- Estados de los módulos se cargarán aquí -->
+                </div>
+                <div class="preview-actions">
+                    <button class="btn-preview btn-store" id="btn-preview-almacenar">
+                        <i class="fas fa-database"></i> Finalizar/Almacenar
+                    </button>
+                    <button class="btn-preview btn-download-tsv" id="btn-preview-descargar-tsv">
+                        <i class="fas fa-file-export"></i> Descargar TSV
+                    </button>
+                    <button class="btn-preview btn-download-txt" id="btn-preview-descargar-txt">
+                        <i class="fas fa-file-alt"></i> Descargar TXT
+                    </button>
+                </div>
+            </div>
+            <!-- NO hay modal-footer con botón Cancelar -->
+        </div>
+    </div>
+
+    <<script src="ver/cib-estado.js"></script>
+    <script src="ver/cib-storage.js"></script>
+    <script src="ver/cib-export.js"></script>
+    <script src="ver/cib-navegacion.js"></script>
+    <script src="python_bridge.js"></script>
+</body>
+</html>

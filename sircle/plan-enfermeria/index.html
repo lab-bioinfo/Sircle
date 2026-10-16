@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan de Enfermería</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS del módulo -->
+    <link rel="stylesheet" href="plan-enfermeria.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header class="module-header">
+        <h1><i class="fas fa-clipboard-list"></i> Plan de Enfermería</h1>
+    </header>
+
+    <div class="form-container">
+
+        <div class="section">
+            <h3 class="section-title">Seleccione los cuidados de enfermería</h3>
+
+            <div class="chip-group" id="plan-enfermeria">
+
+                <button type="button" class="chip" data-value="valorar_hemodinamia">
+                    Valorar hemodinamia
+                </button>
+
+                <button type="button" class="chip" data-value="funcion_respiratoria">
+                    Valorar función respiratoria
+                </button>
+
+                <button type="button" class="chip" data-value="estado_conciencia">
+                    Valorar estado de conciencia
+                </button>
+
+                <button type="button" class="chip" data-value="edema">
+                    Presencia y características de edema
+                </button>
+
+                <button type="button" class="chip" data-value="coloracion_piel">
+                    Observar coloración de piel y mucosas
+                </button>
+
+                <button type="button" class="chip" data-value="sangrado">
+                    Pesquisar presencia de sangrado
+                </button>
+
+                <button type="button" class="chip" data-value="secreciones">
+                    Observar características de las secreciones
+                </button>
+
+                <button type="button" class="chip" data-value="curva_termica">
+                    Vigilar curva térmica
+                </button>
+
+                <button type="button" class="chip" data-value="dolor">
+                    Valorar presencia de dolor
+                </button>
+
+                <button type="button" class="chip" data-value="neuromuscular">
+                    Valorar función neuromuscular
+                </button>
+
+                <button type="button" class="chip" data-value="ulceras_presion">
+                    Prevención de úlceras por presión
+                </button>
+
+                <button type="button" class="chip" data-value="vigilancia_estricta">
+                    Vigilancia estricta
+                </button>
+
+                <button type="button" class="chip" data-value="gc_elementos_invasivos">
+                    GC en paciente con elementos invasivos
+                </button>
+
+                <button type="button" class="chip" data-value="preparacion_preoperatoria">
+                    Preparación preoperatoria
+                </button>
+
+                <button type="button" class="chip" data-value="paciente_convulsivo">
+                    Gestión del cuidado en paciente convulsivo
+                </button>
+
+                <button type="button" class="chip" data-value="nauseas_vomitos">
+                    Pesquisar presencia de náuseas y vómitos
+                </button>
+
+                <button type="button" class="chip" data-value="csv_monitorizacion">
+                    CSV – Monitorización continua
+                </button>
+
+                <button type="button" class="chip" data-value="agitacion_psicomotora">
+                    Gestión del cuidado en paciente con riesgo de agitación psicomotora
+                </button>
+
+                <button type="button" class="chip" data-value="apoyo_emocional">
+                    Apoyo emocional
+                </button>
+                
+                <button type="button" class="chip" data-value="hipo_hiperglucemia">
+                    Valorar S y S de hipo / hiperglucemia
+                </button>
+
+                <button type="button" class="chip" data-value="debito_urinario">
+                    Cuantificar débito urinario
+                </button>
+
+                <button type="button" class="chip" data-value="deposiciones">
+                    Observar características de deposiciones
+                </button>
+
+                <button type="button" class="chip" data-value="tolerancia_alimentaria">
+                    Valorar tolerancia alimentaria y tipo de régimen
+                </button>
+
+                
+
+                <button type="button" class="chip chip-otros" data-value="otros">
+                    Otros
+                </button>
+
+            </div>
+
+            <!-- Input oculto (para guardar/exportar) -->
+            <input type="hidden" id="plan-enfermeria-input" name="plan_enfermeria">
+
+            <!-- Campo de texto libre -->
+            <div id="plan-otros-texto" class="otros-container">
+                <label>Otros cuidados</label>
+                <textarea
+                    name="plan_enfermeria_otros"
+                    placeholder="Escriba otros cuidados de enfermería..."
+                ></textarea>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="plan-enfermeria.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso Paciente - UE Adulto</title>
+    <link rel="stylesheet" href="ingreso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title-block">
+                <h1>CUIDADOS DE ENFERMERÍA E INDICACIONES MÉDICAS</h1>
+                <h2>UNIDAD DE EMERGENCIA ADULTO</h2>
+            </div>
+            <div class="time-stamp">
+                <div id="current-date"></div>
+                <div id="current-time"></div>
+            </div>
+        </div>
+
+        <form id="patient-form">
+            <div class="form-section">
+                <div class="form-grid cols-4">
+                    <div class="form-group">
+                        <label for="patient-name" class="required">Nombre</label>
+                        <input type="text" id="patient-name" name="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patient-lastname" class="required">Apellido</label>
+                        <input type="text" id="patient-lastname" name="patientLastname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patient-age" class="required">Edad</label>
+                        <input type="number" id="patient-age" name="patientAge" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patient-rut" class="required">RUT</label>
+                        <input type="text" id="patient-rut" name="patientRUT" placeholder="12.345.678-9" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ingreso-fecha" class="required">Fecha ingreso</label>
+                        <input type="date" id="ingreso-fecha" name="admissionDate" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-grid cols-4">
+                    <div class="form-group">
+                        <label for="birth-date" class="required">Fecha nacimiento</label>
+                        <input type="date" id="birth-date" name="birthDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="account-number" class="required">Cta. Corriente</label>
+                        <input type="text" id="account-number" name="accountNumber" required>
+                    </div>
+                    
+                    <div class="form-group" id="container-prevision">
+                        <label for="health-insurance" class="required">Previsión</label>
+                        <select id="health-insurance" name="healthInsurance" required><option>Cargando...</option></select>
+                    </div>
+                    
+                    <div class="form-group" id="container-procedencia">
+                        <label for="origin" class="required">Procedencia</label>
+                        <select id="origin" name="origin" required><option>Cargando...</option></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Acompañamiento</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="companionship" value="si"> Sí</label>
+                            <label class="radio-label"><input type="radio" name="companionship" value="no"> No</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone" class="required">Teléfono</label>
+                        <input type="tel" id="contact-phone" name="contactPhone" required>
+                    </div>
+                </div>
+
+                <div class="conditional-field" id="responsible-field">
+                    <div class="form-grid cols-2">
+                        <div class="form-group">
+                            <label for="familiar-responsable" class="required">Familiar responsable</label>
+                            <input type="text" id="familiar-responsable" name="responsibleFamily">
+                        </div>
+                        <div class="form-group">
+                            <label for="parentesco" class="required">Parentesco</label>
+                            <select id="parentesco" name="parentesco">
+                                <option value="">Seleccione</option>
+                                <option value="padre">Padre</option>
+                                <option value="madre">Madre</option>
+                                <option value="hijo/a">Hijo/a</option>
+                                <option value="abuelo/a">Abuelo/a</option>
+                                <option value="conyugue">Cónyuge</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-grid cols-2">
+                    <div class="form-group" id="container-diagnostico">
+                        <label for="admission-diagnosis" class="required">Diagnóstico ingreso</label>
+                        <select id="admission-diagnosis" name="admissionDiagnosis" required><option>Cargando...</option></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Antecedentes mórbidos</label>
+                        <div class="multi-select" id="morbid-history-select"></div>
+                        <input type="hidden" id="morbid-history" name="morbidHistory">
+                        <div class="conditional-field" id="morbid-other-field">
+                            <div class="form-group">
+                                <label for="morbid-other">Especificar antecedente</label>
+                                <input type="text" id="morbid-other" name="morbidOther" placeholder="Escriba el antecedente específico">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Alergias</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="allergies" value="si"> Sí</label>
+                            <label class="radio-label"><input type="radio" name="allergies" value="no"> No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conditional-field" id="allergies-field">
+                    <div class="form-group">
+                        <label>Lista de alergias</label>
+                        <div class="multi-select" id="allergies-select"></div>
+                        <input type="hidden" id="allergies-list" name="allergiesList">
+                        <div class="conditional-field" id="allergies-other-field">
+                            <div class="form-group">
+                                <label for="allergies-other">Especificar alergia</label>
+                                <input type="text" id="allergies-other" name="allergiesOther" placeholder="Escriba la alergia específica">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-grid cols-4">
+                    <div class="form-group">
+                        <label class="required">FAV</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="fav" value="si"> Sí</label>
+                            <label class="radio-label"><input type="radio" name="fav" value="no"> No</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required">No puncionar</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="no-puncture" value="si"> Sí</label>
+                            <label class="radio-label"><input type="radio" name="no-puncture" value="no"> No</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required">No tomar PA</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="no-bp" value="si"> Sí</label>
+                            <label class="radio-label"><input type="radio" name="no-bp" value="no"> No</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="bp-extremidad" class="required">Extremidad</label>
+                        <select id="bp-extremidad" name="bpExtremidad">
+                            <option value="">Seleccione</option>
+                            <option value="superior_derecha">Superior derecha</option>
+                            <option value="superior_izquierda">Superior izquierda</option>
+                            <option value="inferior_derecha">Inferior derecha</option>
+                            <option value="inferior_izquierda">Inferior izquierda</option>
+                            <option value="no_aplica">NO APLICA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dialysis-days" class="required">Días diálisis</label>
+                        <select id="dialysis-days" name="dialysisDays">
+                            <option value="">Seleccione</option>
+                            <option value="lunes_miercoles_viernes">Lunes, miércoles y viernes</option>
+                            <option value="martes_jueves_sabado">Martes, jueves y sábado</option>
+                            <option value="no_aplica">NO APLICA</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="container-dialisis-centro">
+                        <label for="dialysis-center" class="required">Centro diálisis</label>
+                        <select id="dialysis-center" name="dialysisCenter"><option>Cargando...</option></select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="ingreso.js"></script>
+</body>
+</html>

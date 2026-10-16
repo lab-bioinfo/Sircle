@@ -1,0 +1,44 @@
+{
+  "examenes_laboratorio": [
+    { "value": "", "display": "Seleccione..." },
+    { "value": "03-02-004", "display": "Ácido láctico" },
+    { "value": "03-02-005", "display": "Ácido úrico" },
+    { "value": "03-02-035", "display": "Ácido Valproico" },
+    { "value": "03-02-060", "display": "Amilasa" },
+    { "value": "03-02-008", "display": "Bilirrubina total" },
+    { "value": "03-02-010", "display": "Bilirrubina conjugada" },
+    { "value": "03-02-012", "display": "Calcio" },
+    { "value": "03-02-013", "display": "Calcio iónico" },
+    { "value": "03-02-015", "display": "Carbamazepina" },
+    { "value": "03-01-045", "display": "Hemograma" },
+    { "value": "03-05-031", "display": "Proteína C reactiva" },
+    { "value": "03-02-063", "display": "GOT/AST" },
+    { "value": "03-02-063", "display": "GPT/ALT" },
+    { "value": "03-06-011", "display": "Urocultivo" }
+  ],
+  "examenes_imagen": [
+    { "value": "rx_torax", "display": "Radiografía de tórax" },
+    { "value": "rx_extremidad", "display": "Radiografía extremidad" },
+    { "value": "tac_cerebro", "display": "TAC cerebro" },
+    { "value": "tac_torax", "display": "TAC tórax" },
+    { "value": "tac_abdomen", "display": "TAC abdomen" },
+    { "value": "eco_abdominal", "display": "Ecografía abdominal" },
+    { "value": "rm", "display": "Resonancia magnética" }
+  ],
+  "interconsultas": [
+    { "value": "hemoglucotest", "display": "Hemoglucotest" },
+    { "value": "electrocardiograma", "display": "Electrocardiograma" },
+    { "value": "monitorizacion", "display": "Monitorización continua" },
+    { "value": "oximetria", "display": "Oximetría de pulso" },
+    { "value": "interconsulta_medica", "display": "Interconsulta médica" }
+  ],"unidades_control": [
+    { "value": "mg/dL", "display": "mg/dL" },
+    { "value": "mg", "display": "mg" },
+    { "value": "UI", "display": "UI" },
+    { "value": "%", "display": "%" },
+    { "value": "g", "display": "g" },
+    { "value": "mcg", "display": "mcg" },
+    { "value": "mmol/L", "display": "mmol/L" },
+    { "value": "Unidades", "display": "Unidades" }
+  ]
+}

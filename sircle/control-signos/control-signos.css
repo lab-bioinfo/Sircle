@@ -1,0 +1,339 @@
+/* control-signos.css - VERSIÓN CORREGIDA */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 15px;
+    color: #333;
+}
+
+.module-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #2c80ff;
+    position: relative;
+}
+
+.module-header h2 {
+    font-size: 1.3rem;
+    color: #2c80ff;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #2c80ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #1a6fe6;
+}
+
+.vital-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.vital-table thead {
+    background: #2c80ff;
+    color: white;
+}
+
+.vital-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.vital-table th:last-child {
+    border-right: none;
+}
+
+.vital-table tbody tr {
+    border-bottom: 1px solid #e8eaed;
+    transition: background 0.2s;
+}
+
+.vital-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.vital-table tbody tr:hover {
+    background: #edf2ff;
+}
+
+.vital-table td {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+.vital-table td:first-child {
+    font-weight: 600;
+    color: #555;
+    width: 180px;
+    border-right: 1px solid #e8eaed;
+}
+
+.vital-table input,
+.vital-table select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: border 0.2s;
+}
+
+.vital-table input:focus,
+.vital-table select:focus {
+    outline: none;
+    border-color: #2c80ff;
+    box-shadow: 0 0 0 2px rgba(44, 128, 255, 0.1);
+}
+
+.vital-table input[readonly] {
+    background: #f0f4f8;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Estilos específicos para tipos de input */
+.vital-table input[type="number"] {
+    text-align: right;
+}
+
+.vital-table .pam {
+    background: #e3f2fd;
+    border-color: #2196f3;
+}
+
+.btn-calc {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-calc:hover {
+    background: #3d8b40;
+}
+
+.glasgow-cell {
+    background: #f8f9fa;
+
+}
+
+/* Modal Glasgow - VERSIÓN CORREGIDA */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* QUITA ESTA LÍNEA: .modal.show { ... } */
+/* Y REEMPLÁZALA POR: */
+
+.modal:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h3 {
+    color: #2c80ff;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8eaed;
+}
+
+.glasgow-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.glasgow-group label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.glasgow-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background: white;
+    cursor: pointer;
+}
+
+.glasgow-group select:focus {
+    outline: none;
+    border-color: #2c80ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .module-container {
+        padding: 15px;
+    }
+    
+    .module-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .vital-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .vital-table td:first-child {
+        width: 150px;
+        min-width: 150px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+}
+
+/* Colores específicos para categorías */
+.vital-table select option[value="<2s"] {
+    color: #4caf50;
+}
+
+.vital-table select option[value=">2s"] {
+    color: #f44336;
+}
+
+/* Efectos de transición para inputs */
+.vital-table input,
+.vital-table select,
+.btn-calc,
+.btn-primary {
+    transition: all 0.2s ease;
+}
+
+/* Focus states mejorados */
+.vital-table input:focus,
+.vital-table select:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(44, 128, 255, 0.2);
+}
+
+.modal-large {
+    max-width: 800px;
+}
+
+.dolor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.dolor-grid textarea,
+.dolor-grid input {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px;
+    font-family: inherit;
+}
+
+.dolor-grid input[type="number"] {
+    min-height: auto;
+}
+
+.dolor-cell {
+    text-align: left;
+}
+
+.close-modal {
+    position: relative;
+    top: 5px;
+    left: 370px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #000;
+}

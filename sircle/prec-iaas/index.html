@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo IAAS</title>
+    <link rel="stylesheet" href="prec.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PREVENCIÓN IAAS</h1>
+        </header>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th class="seccion">SECCIÓN</th>
+                    <th class="accion titulo">ACCIÓN</th>
+                    <th class="obs titulo">OBS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- FLEBITIS -->
+                <tr><td class="seccion" colspan="3">FLEBITIS</td></tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        <label><input type="checkbox" id="rev-fijacion"> Revisión fijación</label>
+                    </td>
+                    <td class="obs" rowspan="3">
+                        <textarea id="obs-flebitis"></textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        <label><input type="checkbox" id="rev-vencimiento"> Revisión fecha venc.</label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        <select id="grado-flebitis">
+                            <option value="">Grado INS</option>
+                            <option value="0">0 - Sin síntomas</option>
+                            <option value="1">1 - Eritema ± dolor</option>
+                            <option value="2">2 - Dolor + eritema/edema</option>
+                            <option value="3">3 - Dolor + veta/cordón</option>
+                            <option value="4">4 - Cordón >2.5cm ± pus</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <!-- NAVM -->
+                <tr><td class="seccion" colspan="3">NAVM</td></tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        <label><input type="checkbox" id="posicion"> Posición 30°–45°</label>
+                    </td>
+                    <td class="obs" rowspan="6">
+                        <textarea id="obs-navm"></textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        Verif. P° cuff:
+                        <label><input type="radio" name="cuff" value="si"> Sí</label>
+                        <label><input type="radio" name="cuff" value="no"> No</label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        Aspiración técnica:
+                        <label><input type="radio" name="aspiracion" value="si"> Sí</label>
+                        <label><input type="radio" name="aspiracion" value="no"> No</label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        Aspiración bucal:
+                        <label><input type="radio" name="bucal" value="si"> Sí</label>
+                        <label><input type="radio" name="bucal" value="no"> No</label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        Lavado manos:
+                        <label><input type="radio" name="manos" value="si"> Sí</label>
+                        <label><input type="radio" name="manos" value="no"> No</label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        Higiene oral:
+                        <label><input type="radio" name="clorhex" value="si"> Sí</label>
+                        <label><input type="radio" name="clorhex" value="no"> No</label>
+                    </td>
+                </tr>
+                
+                <!-- ITU -->
+                <tr><td class="seccion" colspan="3">ITU</td></tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        Aseo genital:
+                        <label><input type="radio" name="aseo" value="si"> Sí</label>
+                        <label><input type="radio" name="aseo" value="no"> No</label>
+                    </td>
+                    <td class="obs" rowspan="2">
+                        <textarea id="obs-itu"></textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td class="accion">
+                        <label><input type="checkbox" id="rev-fijacion-itu"> Revisión fijación</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="prec.js"></script>
+</body>
+</html>

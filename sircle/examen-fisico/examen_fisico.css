@@ -1,0 +1,243 @@
+/* Variables y estilos base */
+:root {
+    --primary-color: #2c80ff;
+    --border-color: #e2e8f0;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 20px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+/* Encabezado con botón */
+.encabezado-modulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 12px;
+}
+
+.btn-duplicar {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-duplicar:hover {
+    background-color: #1e6be0;
+}
+
+/* Contenedor de la tabla */
+.tabla-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Tabla principal */
+.examen-fisico {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    table-layout: fixed;
+}
+
+/* ===== ESTILOS POR BLOQUE ===== */
+.examen-fisico tbody.bloque-dia {
+    display: table-row-group;
+    background-color: white;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.examen-fisico tbody.bloque-dia + tbody.bloque-dia {
+    margin-top: 20px;
+    border-top: 3px solid var(--primary-color);
+}
+
+/* Fila de fecha */
+tr.fecha-bloque {
+    background-color: #e6f0ff;
+    border-bottom: 1px solid #b8d4ff;
+}
+
+tr.fecha-bloque td {
+    padding: 6px 12px;
+    text-align: center;
+}
+
+.fecha-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #0056b3;
+    font-weight: 500;
+}
+
+.fecha-texto {
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+/* Fila de títulos por bloque */
+tr.titulos-bloque {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr.titulos-bloque th {
+    padding: 8px 6px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    background-color: var(--primary-color);
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+tr.titulos-bloque th:last-child {
+    border-right: none;
+}
+
+/* Filas normales */
+.examen-fisico tbody.bloque-dia tr:not(.fecha-bloque):not(.titulos-bloque) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.examen-fisico tbody.bloque-dia tr:not(.fecha-bloque):not(.titulos-bloque):hover {
+    background-color: #f8fafc;
+}
+
+/* Celdas */
+.examen-fisico td {
+    padding: 8px 6px;
+    vertical-align: top;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+.examen-fisico td:first-child {
+    font-weight: 600;
+    color: #555;
+    background-color: #f9f9fb;
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+}
+
+/* Textareas */
+textarea {
+    width: 100%;
+    min-height: 40px;
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* Inputs generales */
+input[type="text"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+/* Para campos en línea (autocomplete + tiempo, etc.) */
+.examen-fisico td > input,
+.examen-fisico td > select {
+    display: inline-block;
+    width: calc(50% - 4px);
+    margin-right: 4px;
+    vertical-align: top;
+}
+
+.examen-fisico td > input:last-child,
+.examen-fisico td > select:last-child {
+    margin-right: 0;
+}
+
+/* Inputs autocomplete */
+.input-autocomplete {
+    width: 100%;
+    background-color: white;
+}
+
+.input-autocomplete:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 1px rgba(44,128,255,0.2);
+    outline: none;
+}
+
+/* Clases para campos ocultos (toggle) */
+.oculto {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    .encabezado-modulo { flex-direction: column; align-items: stretch; }
+    .btn-duplicar { justify-content: center; }
+    
+    .tabla-container { overflow-x: auto; }
+    .examen-fisico { min-width: 600px; }
+    
+    .examen-fisico td:first-child {
+        width: 100px;
+        min-width: 100px;
+    }
+    
+    .examen-fisico td > input,
+    .examen-fisico td > select {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+}
+
+/* Scrollbar personalizado */
+.tabla-container::-webkit-scrollbar {
+    height: 6px;
+}
+.tabla-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+.tabla-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}

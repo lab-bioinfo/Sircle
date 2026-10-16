@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Atención de Enfermería</title>
+  <link rel="stylesheet" href="atencion.css">
+  <link rel="stylesheet" href="lpp.css">
+</head>
+<body>
+
+<section class="atencion-enfermeria">
+
+  <h2>Atención de Enfermería</h2>
+
+  <div class="tablas-grid">
+
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>Actividad</th>
+          <th>Registro</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>CSV</td>
+          <td>
+            <input type="text" id="csv_horario_input" class="input-autocomplete" 
+                   list="csv_horario_opciones" data-target="csv_horario" 
+                   placeholder="Escriba frecuencia...">
+            <input type="hidden" id="csv_horario" name="csv_horario">
+            <datalist id="csv_horario_opciones"></datalist>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Monitoreo continuo</td>
+          <td class="radio-group">
+            <label>
+              <input type="radio" name="monitoreo_continuo" value="si"> Sí
+            </label>
+            <label>
+              <input type="radio" name="monitoreo_continuo" value="no" checked> No
+            </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>¿Cama o Camilla?</td>
+          <td class="radio-group">
+            <label>
+              <input type="radio" name="cama_camilla" value="Cama"> Cama
+            </label>
+            <label>
+              <input type="radio" name="cama_camilla" value="camilla" checked> Camilla
+            </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Posición</td>
+          <td>
+            <input type="text" id="posicion_camilla_input" class="input-autocomplete" 
+                   list="posiciones_camilla_list_opciones" data-target="posicion_camilla" 
+                   placeholder="Busque posición...">
+            <input type="hidden" id="posicion_camilla" name="posicion_camilla">
+            <datalist id="posiciones_camilla_list_opciones"></datalist>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>Parámetro</th>
+          <th>Registro</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="subtitulo">
+          <td colspan="2">Cuidados Oxigenoterapia</td>
+        </tr>
+
+        <tr>
+          <td>O₂ / FiO₂ </td>
+          <td>
+            <div class="input-porcentaje">
+              <input type="number" id="fio2" name="fio2" class="input-number" 
+                     min="0" max="100" step="1" aria-label="FiO2 porcentaje">
+              <span class="simbolo-porcentaje">%</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Tipo dispositivo</td>
+          <td>
+            <input type="text" id="tipo_dispositivo_input" class="input-autocomplete" 
+                   list="tipo_dispositivo_oxigeno_opciones" data-target="tipo_dispositivo" 
+                   placeholder="Busque dispositivo...">
+            <input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo">
+            <datalist id="tipo_dispositivo_oxigeno_opciones"></datalist>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Protección de la piel</td>
+          <td class="radio-group">
+            <label><input type="radio" name="proteccion_piel_o2" value="si"> Sí</label>
+            <label><input type="radio" name="proteccion_piel_o2" value="no" checked> No</label>
+          </td>
+        </tr>
+
+        <tr class="subtitulo">
+          <td colspan="2">Aseo de Cavidades</td>
+        </tr>
+
+        <tr>
+          <td>Aspiración de secreciones</td>
+          <td class="radio-group">
+            <label><input type="radio" name="aspiracion_secreciones" value="si"> Sí</label>
+            <label><input type="radio" name="aspiracion_secreciones" value="no" checked> No</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Agua del humidificador</td>
+          <td class="radio-group">
+            <label><input type="radio" name="agua_humidificador" value="si"> Sí</label>
+            <label><input type="radio" name="agua_humidificador" value="no" checked> No</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Rotación del dispositivo</td>
+          <td class="radio-group">
+            <label><input type="radio" name="rotacion_dispositivo" value="si"> Sí</label>
+            <label><input type="radio" name="rotacion_dispositivo" value="no" checked> No</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Protección de la piel</td>
+          <td class="radio-group">
+            <label><input type="radio" name="proteccion_piel_aseo" value="si"> Sí</label>
+            <label><input type="radio" name="proteccion_piel_aseo" value="no" checked> No</label>
+          </td>
+        </tr>
+
+        <tr class="subtitulo">
+          <td colspan="2">Resp. Apertura de Hoja</td>
+        </tr>
+
+        <tr>
+          <td>CNAF</td>
+          <td><input type="text" id="resp_cnaf" name="resp_cnaf" placeholder="Responsable"></td>
+        </tr>
+
+        <tr>
+          <td>VMNI</td>
+          <td><input type="text" id="resp_vmni" name="resp_vmni" placeholder="Responsable"></td>
+        </tr>
+
+        <tr>
+          <td>VMI</td>
+          <td><input type="text" id="resp_vmi" name="resp_vmi" placeholder="Responsable"></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <div id="lpp-container"></div>
+
+</section>
+
+<script src="atencion.js"></script>
+
+</body>
+</html>

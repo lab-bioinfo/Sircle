@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicaciones Médicas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="indicaciones.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="form-container">
+        <h2 class="section-title">
+            <i class="fas fa-prescription"></i> Indicaciones Médicas
+        </h2>
+
+        <div class="four-columns-grid">
+
+            <!-- COLUMNA 1: RÉGIMEN -->
+            <div class="column">
+                <div class="column-header">
+                    <h3><i class="fas fa-utensils"></i> Régimen</h3>
+                </div>
+
+                <div class="form-group">
+                    <label for="regimen-type" class="required">Tipo de Régimen</label>
+                    <select id="regimen-type" required class="regimen-select">
+                        <option value="">Seleccione tipo...</option>
+                        <optgroup label="Dietas Especiales">
+                            <option value="dieta_basal">Dieta basal</option>
+                            <option value="dieta_absoluta">Dieta absoluta</option>
+                            <option value="dieta_hiposodica">Dieta hiposódica</option>
+                            <option value="dieta_normoproteica">Dieta normoproteica</option>
+                            <option value="dieta_hiperproteica">Dieta hiperproteica</option>
+                            <option value="dieta_diabetes">Dieta para diabetes</option>
+                            <option value="dieta_sin_gluten">Exento de gluten</option>
+                            <option value="dieta_sin_lactosa">Sin lactosa</option>
+                        </optgroup>
+                        <optgroup label="Líquidos">
+                            <option value="tolerancia_liquidos">Tolerancia a líquidos</option>
+                            <option value="liquido_normal">Líquido normal</option>
+                        </optgroup>
+                        <optgroup label="Semilíquidos">
+                            <option value="dieta_semiliquida">Semilíquida</option>
+                        </optgroup>
+                        <optgroup label="Blandos">
+                            <option value="dieta_semiblanda">Semiblanda</option>
+                        </optgroup>
+                        <option value="otro">Otro (especificar)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="regimen-horario">Horario</label>
+                    <input type="text" id="regimen-horario" placeholder="Ej: 8:00, 12:00, 18:00">
+                </div>
+
+                <div class="form-group">
+                    <label for="regimen-frecuencia">Frecuencia</label>
+                    <input type="text" id="regimen-frecuencia" placeholder="Ej: Cada 8 horas">
+                </div>
+
+                <div class="form-actions-inline">
+                    <button type="button" class="btn btn-secondary btn-small" id="agregar-regimen">
+                        <i class="fas fa-plus"></i> Agregar régimen
+                    </button>
+                    <button type="button" class="btn btn-primary btn-small" id="ver-regimenes" style="display:none;">
+                        <i class="fas fa-list"></i> Ver / Editar 
+                    </button>
+                </div>
+            </div>
+
+            <!-- COLUMNA 2: REPOSO -->
+            <div class="column">
+                <div class="column-header">
+                    <h3><i class="fas fa-bed"></i> Reposo</h3>
+                </div>
+
+                <div class="form-group">
+                    <label for="reposo-tipo" class="required">Tipo de Reposo</label>
+                    <select id="reposo-tipo" required>
+                        <option value="">Seleccione tipo...</option>
+                        <option value="absoluto">Absoluto</option>
+                        <option value="relativo">Relativo</option>
+                        <option value="relativo_asistido">Relativo asistido</option>
+                        <option value="otro">Otro (especificar)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reposo-horario">Horario</label>
+                    <input type="text" id="reposo-horario" placeholder="Ej: 8:00">
+                </div>
+
+                <div class="form-group">
+                    <label for="reposo-frecuencia">Frecuencia</label>
+                    <input type="text" id="reposo-frecuencia" placeholder="Ej: Cada 8 horas">
+                </div>
+
+                <div class="form-actions-inline">
+                    <button type="button" class="btn btn-secondary btn-small" id="agregar-reposo">
+                        <i class="fas fa-plus"></i> Agregar reposo
+                    </button>
+                    <button type="button" class="btn btn-primary btn-small" id="ver-reposos" style="display:none;">
+                        <i class="fas fa-list"></i> Ver / Editar 
+                    </button>
+                </div>
+            </div>
+
+            <!-- COLUMNA 3: FARMACOTERAPIA -->
+            <div class="column">
+                <div class="column-header">
+                    <h3><i class="fas fa-pills"></i> Farmacoterapia</h3>
+                </div>
+
+                <div class="form-group">
+                    <label for="medicamento-nombre" class="required">Medicamento</label>
+                    <input type="text" id="medicamento-nombre">
+                </div>
+
+                <div class="form-grid compact">
+                    <div class="form-group">
+                        <label for="medicamento-dosis" class="required">Dosis</label>
+                        <div class="dosis-container">
+                            <input type="number" id="medicamento-dosis" min="0" max="5000" step="0.01" placeholder="0.00">
+                            <span class="unidad">mg</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="medicamento-via" class="required">Vía</label>
+                        <select id="medicamento-via">
+                            <option value="">Seleccione...</option>
+                            <option value="oral">Oral</option>
+                            <option value="ev">Endovenosa</option>
+                            <option value="im">Intramuscular</option>
+                            <option value="sc">Subcutánea</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="medicamento-frecuencia" class="required">Frecuencia</label>
+                    <select id="medicamento-frecuencia">
+                        <option value="">Seleccione...</option>
+                        <option value="cada_6h">Cada 6 h</option>
+                        <option value="cada_8h">Cada 8 h</option>
+                        <option value="cada_12h">Cada 12 h</option>
+                        <option value="unica_dosis">Dosis única</option>
+                    </select>
+                </div>
+
+                <div class="form-actions-inline">
+                    <button type="button" class="btn btn-secondary btn-small" id="agregar-medicamento">
+                        <i class="fas fa-plus"></i> Agregar medicamento
+                    </button>
+                    <button type="button" class="btn btn-primary btn-small" id="ver-medicamentos" style="display:none;">
+                        <i class="fas fa-list"></i> Ver / Editar 
+                    </button>
+                </div>
+            </div>
+
+            <!-- COLUMNA 4: KINESIOTERAPIA -->
+            <div class="column">
+                <div class="column-header">
+                    <h3><i class="fas fa-hands-helping"></i> Kinesioterapia</h3>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Tipo de Terapia</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="kinesioterapia-tipo" value="motora"> Motora
+                        </label>
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="kinesioterapia-tipo" value="respiratoria"> Respiratoria
+                        </label>
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="kinesioterapia-tipo" value="ambas"> Ambas
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<!-- MODAL REGÍMENES -->
+<div id="modal-regimenes" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-utensils"></i> Regímenes indicados</h2>
+            <button class="btn-close" onclick="cerrarModal('regimenes')">✖</button>
+        </div>
+        <div class="modal-body">
+            <table class="tabla-medicamentos">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Horario</th>
+                        <th>Frecuencia</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="modal-tabla-regimenes"></tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
+
+<!-- MODAL REPOSOS -->
+<div id="modal-reposos" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-bed"></i> Reposos indicados</h2>
+            <button class="btn-close" onclick="cerrarModal('reposos')">✖</button>
+        </div>
+        <div class="modal-body">
+            <table class="tabla-medicamentos">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Duración</th>
+                        <th>Frecuencia</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="modal-tabla-reposos"></tbody>
+            </table>
+        </div>
+    
+    </div>
+</div>
+
+<!-- MODAL MEDICAMENTOS -->
+<div id="modal-medicamentos" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-pills"></i> Medicamentos indicados</h2>
+            <button class="btn-close" onclick="cerrarModal('medicamentos')">✖</button>
+        </div>
+        <div class="modal-body">
+            <table class="tabla-medicamentos">
+                <thead>
+                    <tr>
+                        <th>Medicamento</th>
+                        <th>Dosis</th>
+                        <th>Vía</th>
+                        <th>Frecuencia</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="modal-tabla-medicamentos"></tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
+
+<script src="indicaciones.js"></script>
+</body>
+</html>

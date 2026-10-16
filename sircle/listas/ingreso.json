@@ -1,0 +1,77 @@
+{
+  "prevision": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "fonasa", "display": "Fonasa" },
+    { "value": "isapre", "display": "Isapre" },
+    { "value": "dipreca", "display": "Dipreca" },
+    { "value": "particular", "display": "Particular" }
+  ],
+  "procedencia": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "rural", "display": "Rural" },
+    { "value": "urbano", "display": "Urbano" }
+  ],
+  "diagnostico_ingreso": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "iam_st_con", "display": "IAM con supradesnivel ST" },
+    { "value": "iam_st_sin", "display": "IAM sin supradesnivel ST" },
+    { "value": "icc_descompensada", "display": "Insuficiencia Cardíaca Congestiva Descompensada" },
+    { "value": "crisis_hta_emergencia", "display": "Crisis Hipertensiva: Emergencia" },
+    { "value": "crisis_hta_urgencia", "display": "Crisis Hipertensiva: Urgencia" },
+    { "value": "arritmias", "display": "Arritmias (FA/Bradicardias)" },
+    { "value": "acv_isquemico", "display": "ACV Isquémico" },
+    { "value": "acv_hemorragico", "display": "ACV Hemorrágico" },
+    { "value": "status_convulsivo_1", "display": "Status Convulsivo (Primer episodio)" },
+    { "value": "status_convulsivo_descomp", "display": "Status Convulsivo (Descompensación)" },
+    { "value": "cefalea_hemorragia", "display": "Cefalea (Descarte Hemorragia Subaracnoidea)" },
+    { "value": "tec", "display": "Traumatismo Encéfalo Craneano (TEC)" },
+    { "value": "nac", "display": "Neumonía Adquirida en la Comunidad (NAC)" },
+    { "value": "epoc_asma_crisis", "display": "Exacerbación EPOC / Asma" },
+    { "value": "insuficiencia_resp_aguda", "display": "Insuficiencia Respiratoria Aguda" },
+    { "value": "tep", "display": "Tromboembolismo Pulmonar (TEP)" },
+    { "value": "apendicitis_aguda", "display": "Apendicitis Aguda" },
+    { "value": "colecistitis_colangitis", "display": "Colecistitis Aguda / Colangitis" },
+    { "value": "hda_variceal", "display": "Hemorragia Digestiva Alta (Variceal)" },
+    { "value": "hda_no_variceal", "display": "Hemorragia Digestiva Alta (No Variceal)" },
+    { "value": "hdb", "display": "Hemorragia Digestiva Baja" },
+    { "value": "obstruccion_intestinal", "display": "Obstrucción Intestinal" },
+    { "value": "pancreatitis_litiasica", "display": "Pancreatitis Aguda Litiásica" },
+    { "value": "pancreatitis_no_litiasica", "display": "Pancreatitis Aguda No Litiásica" },
+    { "value": "fractura_expuesta", "display": "Fractura Expuesta" },
+    { "value": "fractura_cerrada", "display": "Fractura Cerrada" },
+    { "value": "politraumatismo", "display": "Politraumatismo" },
+    { "value": "herida_arma_blanca", "display": "Herida por Arma Blanca" },
+    { "value": "herida_arma_fuego", "display": "Herida por Arma de Fuego" },
+    { "value": "quemadura_mediana", "display": "Quemadura Mediana Complejidad" },
+    { "value": "quemadura_gran", "display": "Quemadura Gran Complejidad" },
+    { "value": "cetoacidosis_hiperosmolar", "display": "Cetoacidosis Diabética / Estado Hiperosmolar" },
+    { "value": "sepsis_shock", "display": "Sepsis / Shock Séptico" },
+    { "value": "pielonefritis_aguda", "display": "Pielonefritis Aguda" },
+    { "value": "otro", "display": "Otro" }
+  ],
+  "antecedentes_morbidos": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "hta", "display": "HTA" },
+    { "value": "dm", "display": "Diabetes" },
+    { "value": "epoc", "display": "EPOC" },
+    { "value": "cardiopatia", "display": "Cardiopatía" },
+    { "value": "irc", "display": "IRC" },
+    { "value": "otro", "display": "Otro" }
+  ],
+  "alergias": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "penicilina", "display": "Penicilina" },
+    { "value": "sulfas", "display": "Sulfas" },
+    { "value": "ibuprofeno", "display": "Ibuprofeno" },
+    { "value": "latex", "display": "Látex" },
+    { "value": "otro", "display": "Otro" }
+  ],
+  "centro_dialisis": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "araucania", "display": "Araucanía" },
+    { "value": "tecnodial", "display": "Tecnodial" },
+    { "value": "villarrica_temuco", "display": "Villarrica/Temuco" },
+    { "value": "villarrica", "display": "Villarrica/Villarica" },
+    { "value": "imperial_angeles", "display": "Los Angeles/Sede Imperial" }
+  ]
+}

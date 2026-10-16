@@ -1,0 +1,35 @@
+{
+  "csv_horario": [
+    { "value": "", "display": "Seleccione" },
+    { "value": "5min", "display": "5 min" },
+    { "value": "15min", "display": "15 min" },
+    { "value": "30min", "display": "30 min" },
+    { "value": "1h", "display": "1 hr" },
+    { "value": "2h", "display": "2 hr" },
+    { "value": "4h", "display": "4 hr" },
+    { "value": "6h", "display": "6 hr" },
+    { "value": "12h", "display": "12 hr" }
+  ],
+
+  "posiciones_camilla_list": [
+    { "value": "0", "display": "0°" },
+    { "value": "30", "display": "30°" },
+    { "value": "45", "display": "45°" },
+    { "value": "90", "display": "90°" },
+    { "value": "trendelenburg", "display": "Trendelenburg" },
+    { "value": "trendelenburg_inv", "display": "Trendelenburg invertido" },
+    { "value": "pies_alto", "display": "Pies en alto" }
+  ],
+
+  "tipo_dispositivo_oxigeno": [
+    { "value": "canula_nasal", "display": "Cánula nasal" },
+    { "value": "cnaf", "display": "Cánula nasal de alto Flujo (CNAF)" },
+    { "value": "venturi", "display": "Mascarilla Venturi" },
+    { "value": "reservorio", "display": "Mascarilla alto flujo con reservorio" },
+    { "value": "tet", "display": "Tubo endotraqueal" },
+    { "value": "tubo_t", "display": "Tubo en T" },
+    { "value": "cpap", "display": "CPAP" },
+    { "value": "bipap", "display": "BiPAP" },
+    { "value": "vmi", "display": "VMI" }
+  ]
+}

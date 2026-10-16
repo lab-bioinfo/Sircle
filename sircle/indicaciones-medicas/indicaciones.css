@@ -1,0 +1,354 @@
+/* Variables de colores y estilos */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-color: #f8fafc;
+    --dark-color: #1e293b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: var(--dark-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Encabezado con botón duplicar */
+.encabezado-modulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.section-title {
+    color: var(--success-color);
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid var(--border-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.btn-duplicar {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-duplicar:hover {
+    background-color: #1e6be0;
+}
+
+/* ===== BLOQUES (DÍAS) ===== */
+.bloque-dia {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+}
+
+.bloque-dia:last-child {
+    margin-bottom: 0;
+}
+
+.fecha-bloque {
+    background-color: #e6f0ff;
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    font-weight: 500;
+    color: #0056b3;
+    border-bottom: 1px solid #b8d4ff;
+}
+
+.fecha-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.fecha-texto {
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+/* Sistema de 4 columnas dentro de cada bloque */
+.four-columns-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.column {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.column:hover {
+    box-shadow: var(--shadow);
+}
+
+.column-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.column-header h3 {
+    font-size: 1rem;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group {
+    margin-bottom: 0.75rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+.required::after {
+    content: " *";
+    color: var(--danger-color);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    background-color: white;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Dosis con unidad */
+.dosis-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dosis-cantidad {
+    width: 100%;
+}
+
+.dosis-unidad {
+    width: 100%;
+}
+
+/* Checkbox group */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.checkbox-card {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.4rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.checkbox-card input[type="checkbox"] {
+    width: auto;
+    flex: 0.0 auto;
+    margin: 0;
+}
+
+.checkbox-card:hover {
+    background-color: #f1f5f9;
+}
+
+/* Botones inline */
+.form-actions-inline {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0da271;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: var(--dark-color);
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+.btn-small {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+/* Colores de bordes de columnas */
+.column:nth-child(1) { border-top: 3px solid #f59e0b; }
+.column:nth-child(2) { border-top: 3px solid #3b82f6; }
+.column:nth-child(3) { border-top: 3px solid #ef4444; }
+.column:nth-child(4) { border-top: 3px solid #10b981; }
+
+/* Modales */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 80vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    flex: 1;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.tabla-medicamentos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-medicamentos th,
+.tabla-medicamentos td {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.tabla-medicamentos th {
+    background: #f1f5f9;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .four-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .four-columns-grid {
+        grid-template-columns: 1fr;
+    }
+    .encabezado-modulo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn-duplicar {
+        justify-content: center;
+    }
+}
